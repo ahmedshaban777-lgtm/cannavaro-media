@@ -52,6 +52,17 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 
 /* ===== HERO ILLUSTRATION ===== */
 .illo{max-width:760px;margin:clamp(36px,6vh,60px) auto 0;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;grid-template-areas:"text illo" "ctas illo";gap:8px 48px;align-items:center;max-width:1260px;margin:0 auto;text-align:start}
+.hero-text{grid-area:text}
+.hero-grid .illo{grid-area:illo;margin:0}
+.hero-grid .hero-ctas{grid-area:ctas;justify-content:flex-start;margin-top:6px}
+.hero-grid .def{margin:16px 0 0}
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr;grid-template-areas:"text" "illo" "ctas";text-align:center}
+.hero-grid .hero-ctas{justify-content:center;margin-top:26px}
+.hero-grid .def{margin:16px auto 0}
+.hero-grid .illo{margin-top:28px}
+}
 .illo svg{width:100%;height:auto;display:block;overflow:visible}
 .f1{animation:float 5s ease-in-out infinite}
 .f2{animation:float 6.5s ease-in-out infinite reverse}
@@ -137,14 +148,12 @@ footer .preview-tag{background:var(--yellow);color:var(--ink);border:2px solid v
   <h1 class="brand latin" dir="ltr">CANNAVARO</h1>
   <div class="brand-sub" dir="ltr">MEDIA <i>•</i> CONTENT <i>•</i> WEB</div>
 
+  <div class="hero-grid">
+  <div class="hero-text">
   <span class="slogan-badge"><span class="dot"></span> سلوجان مقترح — بانتظار اعتمادك</span>
   <div class="slogan-line"><span class="en" dir="ltr">In your corner.</span></div>
 
   <p class="def">وكالة متكاملة تبني <b>حضورك الرقمي</b> من الفكرة للشاشة: <span class="mark m">مواقع ومتاجر</span>، <span class="mark y">محتوى وهوية</span>، حملات ممولة، و<span class="mark l">تعليق صوتي</span> — كلها تحت سقف واحد.</p>
-
-  <div class="hero-ctas">
-    <a class="btn btn-solid" href="https://wa.me/201212139929" target="_blank" rel="noopener">ابدأ مشروعك</a>
-    <a class="btn btn-ghost" href="#services">شوف خدماتنا</a>
   </div>
 
   <!-- bespoke multi-service illustration -->
@@ -226,6 +235,12 @@ footer .preview-tag{background:var(--yellow);color:var(--ink);border:2px solid v
       <g class="f3"><path d="M330 380l46 26-19 6-10 18z" fill="#141414" stroke="#FFF6EC" stroke-width="2"/></g>
     </svg>
     <div class="illo-cap">رسمة مخصوصة لكانافارو: موقع، موبايل، كاميرا، تصميم وإعلان — مشهد واحد لكل خدماتنا</div>
+  </div>
+
+  <div class="hero-ctas">
+    <a class="btn btn-solid" href="https://wa.me/201212139929" target="_blank" rel="noopener">ابدأ مشروعك</a>
+    <a class="btn btn-ghost" href="#services">شوف خدماتنا</a>
+  </div>
   </div>
 
   <div class="marquee" dir="ltr">

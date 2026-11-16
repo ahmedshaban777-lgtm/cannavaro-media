@@ -28,9 +28,9 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 @media(max-width:640px){.nav-links{display:none}}
 
 /* ===== HERO ===== */
-.hero{padding:clamp(40px,8vh,90px) clamp(18px,5vw,64px) 0;text-align:center}
+.hero{padding:clamp(36px,7vh,80px) clamp(18px,5vw,64px) 0;text-align:center}
 .kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.4px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:6px 16px;background:var(--soft)}
-.brand{display:block;font-size:clamp(44px,12.8vw,180px);line-height:1;margin:26px 0 4px;letter-spacing:0}
+.brand{display:block;font-size:clamp(44px,12.8vw,180px);line-height:1;margin:24px 0 4px;letter-spacing:0}
 .brand-sub{font-size:clamp(11px,1.9vw,17px);letter-spacing:.6em;font-weight:800;color:var(--mut);margin-bottom:24px}
 .slogan-badge{display:inline-flex;align-items:center;gap:9px;border:1.5px dashed #B9B9B4;border-radius:99px;padding:6px 16px;font-size:12.5px;font-weight:700;color:var(--mut);background:var(--soft)}
 .slogan-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--acc)}
@@ -38,7 +38,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 .slogan-line .en{font-family:'Archivo Black';font-weight:400}
 .def{max-width:620px;margin:15px auto 0;font-size:clamp(15px,2.2vw,18px);line-height:1.95;color:var(--mut);font-weight:600}
 .def b{color:var(--ink);box-shadow:inset 0 -.5em 0 var(--acc-soft)}
-.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
 .btn{font-weight:800;font-size:15.5px;padding:14px 28px;border-radius:99px;transition:transform .22s,background .25s,color .25s}
 .btn:hover{transform:translateY(-2px)}
 .btn-solid{background:var(--ink);color:#fff}
@@ -46,39 +46,45 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 .btn-ghost{border:1.5px solid var(--line);background:#fff;color:var(--ink)}
 .btn-ghost:hover{border-color:var(--ink)}
 
-/* ===== SCENE ===== */
-.scene{max-width:1080px;margin:clamp(48px,8vh,80px) auto 0;padding:0 clamp(18px,5vw,64px);position:relative}
-.scene-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:20px;align-items:end}
-@media(max-width:720px){.scene-grid{grid-template-columns:1fr}}
-.frame{background:#fff;border:1.5px solid var(--line);border-radius:18px;box-shadow:0 24px 60px -30px rgba(17,17,20,.25);overflow:hidden;animation:float 7s ease-in-out infinite}
-.frame .bar{display:flex;align-items:center;gap:6px;padding:11px 14px;border-bottom:1.5px solid var(--line);background:var(--soft)}
+/* ===== WORKSPACE SCENE ===== */
+.scene{max-width:1060px;margin:clamp(48px,8vh,84px) auto 0;padding:0 clamp(14px,4vw,56px);position:relative}
+.desk{position:relative;padding:clamp(10px,3vw,36px)}
+.frame{background:#fff;border:1.5px solid var(--line);border-radius:20px;box-shadow:0 40px 90px -45px rgba(17,17,20,.35);overflow:hidden;position:relative;z-index:2}
+.frame .bar{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1.5px solid var(--line);background:var(--soft)}
 .frame .bar i{width:9px;height:9px;border-radius:50%;background:#D9D9D6;display:block}
 .frame .bar i:first-child{background:var(--acc)}
 .frame .bar .url{flex:1;height:16px;border-radius:8px;background:#ECECEA;margin-right:8px}
-.wire{padding:18px;display:grid;gap:12px}
+.wire{display:grid;grid-template-columns:64px 1fr;min-height:270px}
+@media(max-width:560px){.wire{grid-template-columns:1fr}.w-side{display:none}}
+.w-side{background:var(--ink);padding:16px 12px;display:grid;gap:10px;align-content:start}
+.w-side i{width:26px;height:26px;border-radius:8px;background:#2A2A30;display:block}
+.w-side i.on{background:var(--acc)}
+.w-main{padding:18px;display:grid;gap:12px;align-content:start}
 .w-nav{display:flex;justify-content:space-between;align-items:center}
 .w-logo{width:64px;height:12px;border-radius:6px;background:#D9D9D6}
 .w-links{display:flex;gap:6px}
 .w-links i{width:26px;height:8px;border-radius:4px;background:#ECECEA;display:block}
-.w-hero{height:74px;border-radius:12px;background:linear-gradient(135deg,#EFEFF0,#E4E4E2);position:relative;overflow:hidden}
-.w-hero::after{content:"";position:absolute;inset:auto 14px 14px auto;width:76px;height:22px;border-radius:99px;background:var(--acc);opacity:.85}
+.w-hero{height:84px;border-radius:12px;background:linear-gradient(135deg,#EFEFF0,#E3E3E1);position:relative;overflow:hidden}
+.w-hero::after{content:"";position:absolute;inset:auto 14px 14px auto;width:76px;height:22px;border-radius:99px;background:var(--acc);opacity:.9}
 .w-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.w-card{height:52px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
-.phone{border-radius:26px;border:1.5px solid var(--line);box-shadow:0 24px 60px -30px rgba(17,17,20,.25);overflow:hidden;background:#fff;animation:float 7s ease-in-out infinite reverse;max-width:300px;justify-self:center;width:100%}
-.phone .notch{width:82px;height:7px;border-radius:99px;background:#E0E0DD;margin:12px auto 4px}
-.phone .wire{padding:14px}
-.p-hero{height:56px;border-radius:10px;background:linear-gradient(135deg,#EFEFF0,#E4E4E2);margin-bottom:10px}
-.p-line{height:10px;border-radius:5px;background:#ECECEA;margin-bottom:8px}
-.p-line.short{width:60%}
-.p-btn{height:26px;border-radius:99px;background:var(--ink);margin-top:6px}
-/* floating cards */
-.float-card{position:absolute;background:#fff;border:1.5px solid var(--line);border-radius:14px;box-shadow:0 18px 40px -22px rgba(17,17,20,.3);padding:10px 14px;z-index:2}
-.fc-colors{top:-18px;inset-inline-start:6%;display:flex;gap:6px;animation:float 6s ease-in-out infinite}
-.fc-colors i{width:22px;height:22px;border-radius:7px;display:block}
-.fc-aa{bottom:-14px;inset-inline-end:5%;font-family:'Archivo Black';font-size:24px;animation:float 8s ease-in-out infinite reverse}
-.fc-cursor{top:38%;inset-inline-end:-6px;animation:float 5s ease-in-out infinite}
+.w-card{height:56px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
+/* floating element cards */
+.el{position:absolute;z-index:3;background:#fff;border:1.5px solid var(--line);border-radius:16px;box-shadow:0 22px 50px -25px rgba(17,17,20,.28);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.el .eic{flex:none;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center}
+.el .eic svg{width:21px;height:21px}
+.el .etx{font-size:12px;font-weight:800;line-height:1.35}
+.el .etx small{display:block;font-size:10.5px;font-weight:700;color:#A5A5A0}
+.el-id{top:-8px;inset-inline-start:2%;animation:float 6.5s ease-in-out infinite}
+.el-reel{bottom:16%;inset-inline-start:-2%;animation:float 7.5s ease-in-out infinite reverse}
+.el-ads{top:12%;inset-inline-end:1%;animation:float 7s ease-in-out infinite}
+.el-vo{bottom:-6px;inset-inline-end:8%;animation:float 6s ease-in-out infinite reverse}
+@media(max-width:720px){
+  .el{padding:9px 12px}
+  .el .etx{display:none}
+  .el-id{top:-14px} .el-reel{bottom:auto;top:32%} .el-ads{top:-14px} .el-vo{bottom:-16px}
+}
 @keyframes float{50%{transform:translateY(-10px)}}
-.scene-cap{text-align:center;margin-top:26px;font-size:12.5px;color:#A5A5A0;font-weight:600}
+.scene-cap{text-align:center;margin-top:30px;font-size:12.5px;color:#A5A5A0;font-weight:600}
 
 /* ===== SERVICES ===== */
 .services{padding:clamp(70px,11vh,120px) clamp(18px,5vw,64px);max-width:1080px;margin:0 auto}
@@ -86,20 +92,27 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 .sec-title{font-size:clamp(34px,5.5vw,58px);font-weight:900;line-height:1.15;margin-bottom:8px}
 .sec-sub{color:var(--mut);font-weight:600;font-size:15.5px;max-width:480px;line-height:1.85;margin-bottom:36px}
 .svc-list{border-top:1.5px solid var(--line)}
-.svc{display:flex;align-items:center;gap:20px;padding:22px 10px;border-bottom:1.5px solid var(--line);transition:background .25s,padding .25s;cursor:default}
-.svc:hover{background:var(--soft);padding-inline-start:18px}
+.svc{padding:20px 10px;border-bottom:1.5px solid var(--line);transition:background .25s;cursor:pointer;user-select:none}
+.svc:hover{background:var(--soft)}
+.svc .row{display:flex;align-items:center;gap:20px}
 .svc .num{font-family:'Archivo Black';font-size:13px;color:#C9C9C4;min-width:30px}
 .svc .ic{flex:none;width:56px;height:56px;border-radius:16px;background:var(--acc-soft);display:flex;align-items:center;justify-content:center;transition:transform .3s,background .3s}
-.svc:hover .ic{transform:rotate(-6deg) scale(1.06);background:#FFE0D5}
+.svc:hover .ic{transform:rotate(-6deg) scale(1.06)}
 .svc .ic svg{width:30px;height:30px}
 .svc .tx{flex:1;min-width:0}
 .svc h3{font-size:18.5px;font-weight:800}
 .svc p{font-size:13.5px;color:var(--mut);font-weight:600;line-height:1.75;margin-top:3px}
-.svc .arr{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s}
-.svc:hover .arr{background:var(--ink);border-color:var(--ink);transform:translateX(-4px)}
+.svc .arr{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .35s}
+.svc:hover .arr{background:var(--ink);border-color:var(--ink)}
 .svc:hover .arr svg{stroke:#fff}
+.svc.open .arr{transform:rotate(90deg);background:var(--acc);border-color:var(--acc)}
+.svc.open .arr svg{stroke:#fff}
 .svc .arr svg{width:16px;height:16px;stroke:var(--ink)}
-@media(max-width:640px){.svc p{display:none}.svc .arr{display:none}}
+.svc-details{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1)}
+.svc.open .svc-details{max-height:200px}
+.svc-details ul{list-style:none;margin:14px 86px 4px 0;display:flex;gap:8px;flex-wrap:wrap}
+.svc-details li{font-size:12.5px;font-weight:700;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:99px;padding:6px 14px}
+@media(max-width:640px){.svc p{display:none}.svc-details ul{margin-right:0}}
 
 /* ===== STATEMENT ===== */
 .statement{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,64px) clamp(70px,11vh,120px)}
@@ -125,10 +138,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 footer{background:var(--ink);color:#8A8A85;padding:0 clamp(18px,5vw,64px) 30px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12.5px;font-weight:600}
 footer .preview-tag{border:1px solid #3A3A40;border-radius:8px;padding:2px 10px;color:#B9B9B4}
 
-/* reveal */
-.rv{opacity:1;transform:translateY(24px);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+/* reveal — calm, transform only */
+.rv{opacity:1;transform:translateY(22px);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.on{transform:none}
-@media (prefers-reduced-motion:reduce){.rv{transform:none}.frame,.phone,.float-card,.stamp{animation:none}}
+@media (prefers-reduced-motion:reduce){.rv{transform:none}.el,.stamp{animation:none}}
 </style>
 </head>
 <body>
@@ -157,31 +170,36 @@ footer .preview-tag{border:1px solid #3A3A40;border-radius:8px;padding:2px 10px;
     <a class="btn btn-ghost" href="#services">الخدمات</a>
   </div>
 
-  <div class="scene">
-    <div class="float-card fc-colors">
-      <i style="background:#FF5C38"></i><i style="background:#111114"></i><i style="background:#C9C9C4"></i><i style="background:#FFEDE7"></i>
-    </div>
-    <div class="float-card fc-aa">Aa</div>
-    <div class="float-card fc-cursor">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="#111114"><path d="M4 2l16 9-7 2-3 7z"/></svg>
-    </div>
-    <div class="scene-grid">
+  <!-- layered designer-workspace scene -->
+  <div class="scene rv">
+    <div class="desk">
       <div class="frame">
         <div class="bar"><i></i><i></i><i></i><span class="url"></span></div>
         <div class="wire">
-          <div class="w-nav"><span class="w-logo"></span><span class="w-links"><i></i><i></i><i></i></span></div>
-          <div class="w-hero"></div>
-          <div class="w-row"><div class="w-card"></div><div class="w-card"></div><div class="w-card"></div></div>
+          <div class="w-side"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+          <div class="w-main">
+            <div class="w-nav"><span class="w-logo"></span><span class="w-links"><i></i><i></i><i></i></span></div>
+            <div class="w-hero"></div>
+            <div class="w-row"><div class="w-card"></div><div class="w-card"></div><div class="w-card"></div></div>
+          </div>
         </div>
       </div>
-      <div class="phone">
-        <div class="notch"></div>
-        <div class="wire">
-          <div class="p-hero"></div>
-          <div class="p-line"></div>
-          <div class="p-line short"></div>
-          <div class="p-btn"></div>
-        </div>
+
+      <div class="el el-id">
+        <span class="eic" style="background:#FFEDE7"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.9" stroke-linecap="round"><path d="M12 21a9 9 0 110-18c4.5 0 8 2.6 8 6.2 0 2.9-2.4 4.3-4.6 4.3h-2c-1.3 0-2.1 1-1.7 2.1.5 1.3-.5 2.4-1.7 2.4z"/></svg></span>
+        <span class="etx">هوية بصرية<small>ألوان وشعارات</small></span>
+      </div>
+      <div class="el el-reel">
+        <span class="eic" style="background:#111114"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        <span class="etx">محتوى<small>ريلز وتصوير</small></span>
+      </div>
+      <div class="el el-ads">
+        <span class="eic" style="background:#FFEDE7"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="#E04A2A"/></svg></span>
+        <span class="etx">حملات<small>إعلانات ممولة</small></span>
+      </div>
+      <div class="el el-vo">
+        <span class="eic" style="background:#111114"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg></span>
+        <span class="etx">تعليق صوتي<small>إعلانات وIVR</small></span>
       </div>
     </div>
     <div class="scene-cap">مشهد توضيحي لبيئة العمل — مش نموذج لعميل</div>
@@ -192,64 +210,104 @@ footer .preview-tag{border:1px solid #3A3A40;border-radius:8px;padding:2px 10px;
   <div class="rv">
     <div class="sec-label">SERVICES — خدماتنا</div>
     <h2 class="sec-title">كل اللي حضورك الرقمي محتاجه</h2>
-    <p class="sec-sub">ثمانية تخصصات تحت سقف واحد، بتشتغل مع بعض كمنظومة واحدة مش خدمات متفرقة.</p>
+    <p class="sec-sub">ثمانية تخصصات تحت سقف واحد. دوس على أي خدمة تشوف تفاصيلها في مكانها.</p>
   </div>
   <div class="svc-list">
 
-    <div class="svc rv">
-      <span class="num">01</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.5h19"/><path d="M9.5 12.5L7.5 14.5l2 2M14.5 12.5l2 2-2 2"/></svg></div>
-      <div class="tx"><h3>تصميم وتطوير المواقع</h3><p>مواقع سريعة ومعمولة على مقاس نشاطك، من صفحة تعريفية لمنصة كاملة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.5h19"/><path d="M9.5 12.5L7.5 14.5l2 2M14.5 12.5l2 2-2 2"/></svg></div>
+        <div class="tx"><h3>تصميم وتطوير المواقع</h3><p>مواقع سريعة ومعمولة على مقاس نشاطك، من صفحة تعريفية لمنصة كاملة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>صفحات تعريفية ومنصات</li><li>ربط واتساب ونماذج طلب</li><li>سرعة وتجربة موبايل</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">02</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12a2 2 0 01-2 1.8H8.2a2 2 0 01-2-1.8L5 8z"/><path d="M8.5 10V6.5a3.5 3.5 0 017 0V10"/><path d="M9.5 14.5h5"/></svg></div>
-      <div class="tx"><h3>المتاجر الإلكترونية</h3><p>متجر يبيع عنك: تجربة شراء سهلة وطلب يوصلك واتساب مباشرة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12a2 2 0 01-2 1.8H8.2a2 2 0 01-2-1.8L5 8z"/><path d="M8.5 10V6.5a3.5 3.5 0 017 0V10"/><path d="M9.5 14.5h5"/></svg></div>
+        <div class="tx"><h3>المتاجر الإلكترونية</h3><p>متجر يبيع عنك: تجربة شراء سهلة وطلب يوصلك واتساب مباشرة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>عرض منتجات وسلة سلسة</li><li>طلب مباشر على واتساب</li><li>لوحة تحكم بسيطة</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">03</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.6"/><circle cx="17.5" cy="5.5" r="2.6"/><circle cx="17.5" cy="18.5" r="2.6"/><path d="M8.4 10.8l6.7-4M8.4 13.2l6.7 4"/></svg></div>
-      <div class="tx"><h3>إدارة السوشيال ميديا</h3><p>خطة محتوى شهرية ونشر منتظم وتفاعل يخلي صفحتك عايشة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.6"/><circle cx="17.5" cy="5.5" r="2.6"/><circle cx="17.5" cy="18.5" r="2.6"/><path d="M8.4 10.8l6.7-4M8.4 13.2l6.7 4"/></svg></div>
+        <div class="tx"><h3>إدارة السوشيال ميديا</h3><p>خطة محتوى شهرية ونشر منتظم وتفاعل يخلي صفحتك عايشة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>خطة محتوى شهرية</li><li>تصميم ونشر منتظم</li><li>متابعة رسايل وردود</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">04</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M3.5 8l16-4 .9 3.6L4.4 11.5"/><path d="M8 7.2l2.2 3.2M13 6l2.2 3.2"/><circle cx="12" cy="14.5" r="2.2"/></svg></div>
-      <div class="tx"><h3>إنتاج المحتوى</h3><p>أفكار وسكريبت وتنفيذ محتوى يوقف السكرول ويحكي قصتك.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M3.5 8l16-4 .9 3.6L4.4 11.5"/><path d="M8 7.2l2.2 3.2M13 6l2.2 3.2"/><circle cx="12" cy="14.5" r="2.2"/></svg></div>
+        <div class="tx"><h3>إنتاج المحتوى</h3><p>أفكار وسكريبت وتنفيذ محتوى يوقف السكرول ويحكي قصتك.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>أفكار وسكريبت</li><li>تصوير ومونتاج ريلز</li><li>موشن جرافيك بسيط</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">05</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 110-18c4.5 0 8 2.6 8 6.2 0 2.9-2.4 4.3-4.6 4.3h-2c-1.3 0-2.1 1-1.7 2.1.5 1.3-.5 2.4-1.7 2.4z"/><circle cx="7.5" cy="10" r="1.1"/><circle cx="12" cy="7.5" r="1.1"/><circle cx="16.5" cy="10" r="1.1"/></svg></div>
-      <div class="tx"><h3>الهوية البصرية</h3><p>لوجو وألوان ونظام كامل يخلي الناس تعرفك من أول نظرة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 110-18c4.5 0 8 2.6 8 6.2 0 2.9-2.4 4.3-4.6 4.3h-2c-1.3 0-2.1 1-1.7 2.1.5 1.3-.5 2.4-1.7 2.4z"/><circle cx="7.5" cy="10" r="1.1"/><circle cx="12" cy="7.5" r="1.1"/><circle cx="16.5" cy="10" r="1.1"/></svg></div>
+        <div class="tx"><h3>الهوية البصرية</h3><p>لوجو وألوان ونظام كامل يخلي الناس تعرفك من أول نظرة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>لوجو وألوان وخطوط</li><li>دليل استخدام الهوية</li><li>قوالب سوشيال جاهزة</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">06</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0"/><path d="M12 17.5V21M9 21h6"/></svg></div>
-      <div class="tx"><h3>التعليق الصوتي</h3><p>صوت احترافي لإعلانك وفيديوهاتك وردك الآلي بنبرة مناسبة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0"/><path d="M12 17.5V21M9 21h6"/></svg></div>
+        <div class="tx"><h3>التعليق الصوتي</h3><p>صوت احترافي لإعلانك وفيديوهاتك وردك الآلي بنبرة مناسبة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>إعلانات وفيديوهات تعريفية</li><li>رد آلي IVR ورسائل صوتية</li><li>معالجة وتنقية احترافية</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">07</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.3"/><path d="M12 3.5V6M20.5 12H18"/></svg></div>
-      <div class="tx"><h3>الإعلانات الممولة</h3><p>حملات مدروسة على المنصات المناسبة باستهداف دقيق ومتابعة.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">07</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.3"/><path d="M12 3.5V6M20.5 12H18"/></svg></div>
+        <div class="tx"><h3>الإعلانات الممولة</h3><p>حملات مدروسة على المنصات المناسبة باستهداف دقيق ومتابعة.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>فيسبوك وإنستجرام وتيك توك</li><li>استهداف وإعادة استهداف</li><li>تقارير أداء مفهومة</li>
+      </ul></div>
     </div>
 
-    <div class="svc rv">
-      <span class="num">08</span>
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8"/><circle cx="18.5" cy="7.5" r="3"/><path d="M20.8 9.8L23 12"/></svg></div>
-      <div class="tx"><h3>السيو والتحليلات</h3><p>ظهور أقوى في البحث وأرقام واضحة تعرفك إيه اللي شغال.</p></div>
-      <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+    <div class="svc rv" tabindex="0">
+      <div class="row">
+        <span class="num">08</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E04A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8"/><circle cx="18.5" cy="7.5" r="3"/><path d="M20.8 9.8L23 12"/></svg></div>
+        <div class="tx"><h3>السيو والتحليلات</h3><p>ظهور أقوى في البحث وأرقام واضحة تعرفك إيه اللي شغال.</p></div>
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+      <div class="svc-details"><ul>
+        <li>كلمات مفتاحية مدروسة</li><li>تحسين الصفحات والسرعة</li><li>تقارير شهرية واضحة</li>
+      </ul></div>
     </div>
 
   </div>
@@ -284,6 +342,11 @@ footer .preview-tag{border:1px solid #3A3A40;border-radius:8px;padding:2px 10px;
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.svc').forEach(row=>{
+  const t=()=>row.classList.toggle('open');
+  row.addEventListener('click',t);
+  row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}});
+});
 </script>
 </body>
 </html>

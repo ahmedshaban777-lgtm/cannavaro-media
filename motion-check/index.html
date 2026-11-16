@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>فحص الحركة</title>
+<style>
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#fff;color:#141414;max-width:640px;margin:0 auto;padding:40px 22px;line-height:2}
+h1{font-size:22px;margin:0 0 18px}
+.row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #e5e5e5;padding:10px 2px;font-size:16px}
+.row b{font-weight:700}
+.val{font-weight:800}
+.ok{color:#0a7a3d}.bad{color:#c0272d}
+.track{height:70px;border:2px solid #141414;border-radius:14px;margin:22px 0 6px;position:relative;overflow:hidden;background:#faf8f4}
+.box{position:absolute;top:13px;right:13px;width:42px;height:42px;border-radius:12px;background:#ff5a1f;animation:slide 2.4s ease-in-out infinite alternate}
+@keyframes slide{to{transform:translateX(-140px)}}
+.ua{font-size:12px;color:#666;word-break:break-all;direction:ltr;text-align:left;margin-top:18px}
+@media (prefers-reduced-motion:reduce){.box{animation:none}}
+</style>
+</head>
+<body>
+<h1>فحص الحركة على هذا الجهاز</h1>
+<div class="track"><div class="box" id="box"></div></div>
+<div class="row"><b>الحركة الفعلية للمربع:</b><span class="val" id="motion">…</span></div>
+<div class="row"><b>النظام يطلب تقليل الحركة:</b><span class="val" id="rm">…</span></div>
+<div class="row"><b>المتصفح يشغّل الأنيميشن:</b><span class="val" id="state">…</span></div>
+<div class="ua" id="ua"></div>
+<script>
+const box=document.getElementById('box');
+const st=getComputedStyle(box);
+document.getElementById('state').textContent=(st.animationName!=='none'&&st.animationPlayState==='running')?'نعم':'لا';
+document.getElementById('state').classList.add((st.animationName!=='none'&&st.animationPlayState==='running')?'ok':'bad');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('rm').textContent=rm?'نعم':'لا';
+document.getElementById('rm').classList.add(rm?'bad':'ok');
+const p1=new Promise(r=>requestAnimationFrame(()=>r(box.getBoundingClientRect().left)));
+setTimeout(async()=>{
+  const a=await p1;
+  const b=await new Promise(r=>requestAnimationFrame(()=>r(box.getBoundingClientRect().left)));
+  const moved=Math.abs(a-b)>0.5;
+  document.getElementById('motion').textContent=moved?'شغالة':'واقفة';
+  document.getElementById('motion').classList.add(moved?'ok':'bad');
+},1200);
+document.getElementById('ua').textContent=navigator.userAgent;
+</script>
+</body>
+</html>

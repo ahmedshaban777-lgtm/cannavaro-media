@@ -220,9 +220,9 @@ footer{border-top:1px solid rgba(212,175,55,.12);padding:46px 0 26px;background:
 .fab:hover{transform:scale(1.08)}
 .fab svg{width:30px;height:30px;fill:#fff}
 
-/* ===== Reveal animation (progressive enhancement: content is visible unless JS opts it in) ===== */
-.reveal.pre{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.pre.visible{opacity:1;transform:none}
+/* ===== Reveal animation (transform-only: content is always fully readable, motion is just a slide) ===== */
+.reveal.pre{transform:translateY(20px);transition:transform .6s ease}
+.reveal.pre.visible{transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }

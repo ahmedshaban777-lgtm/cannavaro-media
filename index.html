@@ -220,11 +220,10 @@ footer{border-top:1px solid rgba(212,175,55,.12);padding:46px 0 26px;background:
 .fab:hover{transform:scale(1.08)}
 .fab svg{width:30px;height:30px;fill:#fff}
 
-/* ===== Reveal animation ===== */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
+/* ===== Reveal animation (progressive enhancement: content is visible unless JS opts it in) ===== */
+.reveal.pre{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.pre.visible{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
 
@@ -339,7 +338,7 @@ footer{border-top:1px solid rgba(212,175,55,.12);padding:46px 0 26px;background:
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="13" rx="3"/><path d="M8 21h8M9 9h.01M12 9h.01M15 9h.01"/></svg></div>
         <h3>الرد الآلي وأتمتة خدمة العملاء<small>AI Automation &amp; Chatbots</small></h3>
-        <p>أنظمة رد آلي ذكية عبر واتساب وماسنجر وإنستغرام، ترد على عملائك وتستقبل طلباتهم على مدار الساعة.</p>
+        <p>أنظمة رد آلي عبر واتساب وماسنجر وإنستغرام تساعدك في الرد على الاستفسارات المتكررة واستقبال الطلبات على مدار الساعة — والمحادثة ترجع ليك في أي وقت.</p>
       </div>
 
     </div>
@@ -471,7 +470,6 @@ footer{border-top:1px solid rgba(212,175,55,.12);padding:46px 0 26px;background:
       </div>
 
       <div class="card pkg featured reveal">
-        <span class="badge">الأكثر طلباً</span>
         <h3>باقة النمو والتوسع</h3>
         <p class="for">للأنشطة التي تريد نتائج أسرع وحضوراً أوسع</p>
         <ul>
@@ -653,11 +651,13 @@ fbtns.forEach(function(b){
   });
 });
 
-// Reveal on scroll
-var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// Reveal on scroll (only when motion is allowed and IntersectionObserver exists; otherwise everything stays visible)
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('pre');io.observe(el)});
+}
 
 // WhatsApp helper
 var WA='201212139929';

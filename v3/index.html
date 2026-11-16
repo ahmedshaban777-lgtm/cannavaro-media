@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannavaro Media Agency | وكالة كانافارو للدعاية والإعلان والتسويق الرقمي</title>
+<meta name="description" content="وكالة كانافارو للدعاية والإعلان والتسويق الرقمي — تعليق صوتي، إنتاج محتوى، إدارة حملات، هوية بصرية ومواقع.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050C1C;
+  --gold:#3B82F6;
+  --gold-soft:#67E8F9;
+  --gold-deep:#1D4ED8;
+  --text:#EEF3FF;
+  --muted:#98A6CC;
+  --line:rgba(59,130,246,.22);
+  --green:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.85;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin-inline:auto}
+section{padding:90px 0;position:relative}
+.kicker{color:var(--gold);font-weight:800;font-size:.95rem;letter-spacing:.5px;margin-bottom:10px;display:inline-block;padding:4px 16px;border:1px solid var(--line);border-radius:50px;background:rgba(59,130,246,.07)}
+h2.section-title{font-size:clamp(1.6rem,5vw,2.5rem);font-weight:900;margin:14px 0 12px;line-height:1.4}
+.section-sub{color:var(--muted);max-width:640px;margin-bottom:48px;font-size:1.02rem}
+
+/* ===== Header ===== */
+header{position:fixed;inset-inline:0;top:0;z-index:50;background:rgba(5,12,28,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(59,130,246,.14)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo b{font-size:1.15rem;font-weight:900;letter-spacing:.4px}
+.logo b span{color:var(--gold)}
+.logo small{font-size:.68rem;color:var(--muted)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:.92rem;opacity:.85;transition:.25s}
+.nav-links a:hover{color:var(--gold);opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:50px;font-weight:800;font-size:.95rem;border:none;cursor:pointer;transition:.25s;font-family:inherit}
+.btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 45%,var(--gold-deep));color:#04122E;box-shadow:0 8px 26px rgba(59,130,246,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(59,130,246,.5)}
+.btn-ghost{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-whatsapp{background:var(--green);color:#062b14;box-shadow:0 8px 26px rgba(37,211,102,.35)}
+.btn-whatsapp:hover{transform:translateY(-2px)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.6rem;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;background:var(--bg)}
+.hero .bg{position:absolute;inset:0;background:url('assets/hero-collage-blue.jpg') center/cover no-repeat;opacity:.7}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,28,.85),rgba(5,12,28,.3) 30%,rgba(5,12,28,.3) 70%,rgba(5,12,28,.85)),linear-gradient(180deg,rgba(5,12,28,.5),rgba(5,12,28,.72) 55%,var(--bg))}
+.hero-inner{position:relative;z-index:1;max-width:780px}
+.hero h1{font-size:clamp(2.1rem,6.5vw,3.7rem);font-weight:900;line-height:1.35;margin:18px 0 20px;text-shadow:0 4px 30px rgba(0,0,0,.7)}
+.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold-soft),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{color:#d9d4c6;font-size:1.1rem;max-width:620px;margin-bottom:36px;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+.hero p.sub b{color:var(--gold-soft)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* animated gold equalizer */
+.eq{display:flex;align-items:flex-end;gap:4px;height:44px;margin-bottom:22px}
+.eq i{width:5px;border-radius:3px;background:linear-gradient(180deg,var(--gold-soft),var(--gold-deep));animation:eq 1.1s ease-in-out infinite;box-shadow:0 0 10px rgba(59,130,246,.5)}
+.eq i:nth-child(2n){animation-duration:.9s}.eq i:nth-child(3n){animation-duration:1.3s}.eq i:nth-child(4n){animation-duration:.8s}.eq i:nth-child(5n){animation-duration:1.05s}
+@keyframes eq{0%,100%{height:22%}50%{height:100%}}
+@media (prefers-reduced-motion:reduce){.eq i{animation:none;height:55%}html{scroll-behavior:auto}}
+
+.trust{margin-top:54px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.trust div{background:rgba(18,16,10,.55);border:1px solid var(--line);border-radius:18px;padding:20px 16px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.trust b{display:block;color:var(--gold-soft);font-size:1.08rem;margin-bottom:4px;font-weight:800}
+.trust span{font-size:.83rem;color:var(--muted)}
+
+/* ===== Marquee ===== */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:linear-gradient(90deg,rgba(59,130,246,.06),rgba(59,130,246,.12),rgba(59,130,246,.06));padding:14px 0;position:relative}
+.marquee .track{display:flex;gap:48px;white-space:nowrap;width:max-content;animation:slide 26s linear infinite}
+.marquee span{color:var(--gold);font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:48px}
+.marquee span::after{content:"◆";font-size:.6rem;color:var(--gold-deep)}
+@keyframes slide{to{transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+/* ===== Image-backed sections ===== */
+.photo-sec{background:var(--bg)}
+.photo-sec .bg{position:absolute;inset:0;background-position:center;background-size:cover;opacity:.5}
+.photo-sec .veil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(5,12,28,.52) 30%,rgba(5,12,28,.52) 70%,var(--bg))}
+.photo-sec .container{position:relative;z-index:1}
+
+/* ===== Services ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{background:rgba(16,14,9,.72);border:1px solid var(--line);border-radius:22px;padding:32px 26px;backdrop-filter:blur(12px);transition:.3s;position:relative;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.card::before{content:"";position:absolute;top:0;inset-inline:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(59,130,246,.55);box-shadow:0 22px 50px rgba(0,0,0,.55)}
+.card:hover::before{opacity:1}
+.icon-frame{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:linear-gradient(145deg,rgba(59,130,246,.2),rgba(59,130,246,.05));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(103,232,249,.35),0 6px 18px rgba(0,0,0,.4),0 0 26px rgba(59,130,246,.28)}
+.icon-frame svg{width:32px;height:32px}
+.card h3{font-size:1.1rem;font-weight:800;margin-bottom:4px}
+.card h3 small{display:block;color:var(--gold);font-size:.72rem;font-weight:700;margin-top:3px;letter-spacing:.5px}
+.card p{color:var(--muted);font-size:.9rem;margin-top:8px}
+
+/* ===== Portfolio ===== */
+.work-video{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 44px rgba(0,0,0,.5);background:#000}
+.work-video video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+.work-video .meta,.work-web .meta{padding:16px 20px;background:rgba(14,12,8,.9);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.work-cat{color:var(--gold-soft);font-size:1.15rem;margin:48px 0 20px;display:flex;align-items:center;gap:14px}
+.work-cat::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.w-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.work-web{display:block;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 16px 44px rgba(0,0,0,.5);transition:.3s}
+.work-web:hover{transform:translateY(-4px);border-color:rgba(59,130,246,.55)}
+.work-web img{width:100%;aspect-ratio:4/3.2;object-fit:cover;object-position:top;display:block}
+.mix-grid{display:grid;grid-template-columns:minmax(280px,340px) 1fr;gap:22px;align-items:stretch}
+.a-stack{display:flex;flex-direction:column;gap:22px}
+.a-stack .audio-card{flex:1}
+.work-video.reel video{aspect-ratio:63/99}
+.work-video .meta h3{font-size:1rem;font-weight:800}
+.work-video .meta span{font-size:.75rem;color:var(--gold);border:1px solid var(--line);padding:2px 12px;border-radius:50px;white-space:nowrap}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:22px}
+
+/* audio cards */
+.audio-card{display:flex;align-items:center;gap:16px;background:rgba(8,16,36,.8);border:1px solid var(--line);border-radius:20px;padding:20px 22px;backdrop-filter:blur(10px);box-shadow:0 14px 36px rgba(0,0,0,.4)}
+.play-btn{flex:none;width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));box-shadow:0 8px 22px rgba(59,130,246,.4);transition:.25s}
+.play-btn:hover{transform:scale(1.07)}
+.play-btn svg{width:22px;height:22px;fill:#04122E}
+.play-btn .ic-pause{display:none}
+.audio-card.playing .ic-play{display:none}
+.audio-card.playing .ic-pause{display:block}
+.a-body{flex:1;min-width:0}
+.a-body h3{font-size:.98rem;font-weight:800}
+.a-body .tagline{font-size:.76rem;color:var(--muted);margin-bottom:8px}
+.a-progress{height:5px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden}
+.a-progress i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-soft));border-radius:3px;transition:width .2s linear}
+.a-bars{display:flex;align-items:flex-end;gap:2.5px;height:20px;margin-top:8px}
+.a-bars i{width:3px;height:20%;border-radius:2px;background:var(--gold-deep)}
+.audio-card.playing .a-bars i{animation:eq2 .8s ease-in-out infinite;background:var(--gold)}
+.a-bars i:nth-child(2n){animation-delay:.1s}.a-bars i:nth-child(3n){animation-delay:.25s}.a-bars i:nth-child(4n){animation-delay:.4s}.a-bars i:nth-child(5n){animation-delay:.15s}.a-bars i:nth-child(7n){animation-delay:.33s}
+@keyframes eq2{0%,100%{height:20%}50%{height:100%}}
+.a-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.demos-strip{margin-top:34px;text-align:center}
+.demos-strip p{color:var(--muted);font-size:.88rem;margin-bottom:12px}
+.demos-strip .d-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.demos-strip a{border:1px solid var(--line);color:var(--gold-soft);padding:8px 18px;border-radius:50px;font-size:.84rem;font-weight:700;background:rgba(59,130,246,.06);transition:.25s}
+.demos-strip a:hover{background:rgba(59,130,246,.16)}
+
+/* ===== About / founder ===== */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center}
+.founder{position:relative}
+.founder img{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.6);display:block}
+.founder .ring{position:absolute;inset:-14px;border:1px solid rgba(59,130,246,.35);border-radius:32px;pointer-events:none}
+.about-txt h3{font-size:1.3rem;font-weight:900;margin-bottom:10px}
+.about-txt h3 span{color:var(--gold)}
+.about-txt p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
+.why{text-align:center;padding:30px 18px;border-radius:20px;background:linear-gradient(180deg,rgba(59,130,246,.09),rgba(255,255,255,.02));border:1px solid var(--line);backdrop-filter:blur(8px)}
+.why .num{width:46px;height:46px;margin:0 auto 14px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;background:rgba(59,130,246,.08)}
+.why h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.why p{color:var(--muted);font-size:.86rem}
+
+/* ===== Packages ===== */
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;align-items:stretch}
+.pkg{display:flex;flex-direction:column}
+.pkg.featured{border-color:var(--gold);background:linear-gradient(180deg,rgba(59,130,246,.14),rgba(20,17,9,.8))}
+.pkg h3{font-size:1.25rem;font-weight:900;margin-bottom:4px}
+.pkg .for{color:var(--muted);font-size:.85rem;margin-bottom:18px}
+.pkg ul{list-style:none;margin-bottom:26px;flex:1}
+.pkg li{font-size:.9rem;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.08);display:flex;gap:10px;align-items:flex-start}
+.pkg li::before{content:"◆";color:var(--gold);font-size:.6rem;margin-top:7px}
+.pkg .btn{width:100%}
+
+/* ===== FAQ ===== */
+.faq{max-width:760px;margin-inline:auto}
+.faq details{background:rgba(16,14,9,.7);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;backdrop-filter:blur(8px)}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:800;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.4rem;font-weight:400;transition:.25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 22px 18px;color:var(--muted);font-size:.9rem}
+
+/* ===== Contact ===== */
+.contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+form{background:rgba(8,16,36,.8);border:1px solid var(--line);border-radius:24px;padding:34px 28px;backdrop-filter:blur(12px);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.85rem;font-weight:800;margin-bottom:6px}
+.field input,.field select{width:100%;padding:13px 16px;border-radius:12px;font-family:inherit;font-size:.92rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);color:var(--text);transition:.25s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(59,130,246,.16)}
+.field select option{background:#151310;color:var(--text)}
+.form-note{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+.contact-side .card{margin-bottom:16px}
+.contact-side h3{font-size:1.05rem;font-weight:800;margin-bottom:6px}
+.contact-side p{color:var(--muted);font-size:.9rem}
+.contact-side a.val{color:var(--gold-soft);font-weight:800;direction:ltr;display:inline-block}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid rgba(59,130,246,.14);padding:50px 0 28px;background:#040A18;position:relative}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:36px}
+.foot-grid h4{color:var(--gold);font-size:.95rem;margin-bottom:14px}
+.foot-grid p{color:var(--muted);font-size:.88rem}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:8px}
+.foot-grid li a{color:var(--muted);font-size:.88rem;transition:.25s}
+.foot-grid li a:hover{color:var(--gold)}
+.copy{text-align:center;color:var(--muted);font-size:.8rem;border-top:1px solid rgba(255,255,255,.06);padding-top:22px}
+.copy b{color:var(--gold-soft)}
+
+/* ===== WhatsApp FAB ===== */
+.fab{position:fixed;bottom:22px;left:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);transition:.25s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:31px;height:31px;fill:#fff}
+
+/* ===== Reveal (transform-only: content always readable) ===== */
+.reveal.pre{transform:translateY(20px);transition:transform .6s ease}
+.reveal.pre.visible{transform:none}
+
+@media (max-width:860px){
+  .w-grid{grid-template-columns:1fr}
+  .mix-grid{grid-template-columns:1fr}
+  .work-video.reel{max-width:340px;margin:0 auto;width:100%}
+  .kicker{font-size:.78rem;letter-spacing:0;padding:4px 12px;line-height:1.7}
+  .nav-links{position:fixed;top:70px;inset-inline:0;flex-direction:column;gap:0;background:rgba(5,12,28,.97);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .nav-links.open{max-height:430px}
+  .nav-links a{width:100%;text-align:center;padding:14px 0;border-top:1px solid rgba(255,255,255,.05)}
+  .nav-links .btn{margin:12px auto}
+  .menu-toggle{display:block}
+  .trust{grid-template-columns:1fr;gap:10px}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .founder{max-width:340px;margin-inline:auto}
+  .contact-wrap{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:26px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <b>Cannavaro <span>Media Agency</span></b>
+      <small>وكالة كانافارو للدعاية والإعلان</small>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#packages">باقاتنا</a>
+      <a href="#portfolio">أعمالنا</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل معنا</a>
+      <a class="btn btn-gold" href="#contact">احجز استشارتك المجانية</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="container hero-inner">
+    <span class="kicker">وكالة كانافارو للدعاية والإعلان والتسويق الرقمي</span>
+    <h1>نُحوّل رؤيتك إلى <em>هيمنة رقمية</em>.. ونصنع علامات تجارية لا تُنسى.</h1>
+    <p class="sub">في <b>Cannavaro Media Agency</b>، نجمع بين الإبداع البصري، واستراتيجيات النمو المدروسة، وأحدث تقنيات الذكاء الاصطناعي لبناء حضور رقمي استثنائي لعلامتك التجارية.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#contact">ابدأ مشروعك الآن</a>
+      <a class="btn btn-ghost" href="#portfolio">شوف شغلنا بنفسك</a>
+    </div>
+    <div class="trust reveal">
+      <div><b>شغل حقيقي يتشاف</b><span>مواقع وإعلانات ومحتوى — جرّبه تحت</span></div>
+      <div><b>وضوح كامل</b><span>خطة عمل وتقارير متابعة مع كل مشروع</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Marquee ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>إدارة حملات ممولة</span><span>إنتاج فيديو وإعلانات</span><span>تصميم مواقع ومتاجر</span><span>هوية بصرية</span><span>إدارة سوشيال ميديا</span><span>تحسين محركات البحث</span><span>رد آلي بالذكاء الاصطناعي</span><span>تعليق صوتي احترافي</span>
+    <span>إدارة حملات ممولة</span><span>إنتاج فيديو وإعلانات</span><span>تصميم مواقع ومتاجر</span><span>هوية بصرية</span><span>إدارة سوشيال ميديا</span><span>تحسين محركات البحث</span><span>رد آلي بالذكاء الاصطناعي</span><span>تعليق صوتي احترافي</span>
+  </div>
+</div>
+
+<!-- ===== Services ===== -->
+<section id="services" class="photo-sec">
+  <div class="bg" style="background-image:url('assets/mic-studio-blue.jpg')"></div><div class="veil"></div>
+  <div class="container">
+    <span class="kicker">خدماتنا</span>
+    <h2 class="section-title">خدمات متكاملة لحضور رقمي أقوى</h2>
+    <p class="section-sub">من الحملة الإعلانية للموقع للمحتوى والهوية — كل ما تحتاجه علامتك التجارية في مكان واحد.</p>
+    <div class="grid">
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5v3l4 .8V9.7l-4 .8z"/><path d="M7 9.7l9-4.2v13l-9-4.2"/><path d="M16 8.5a3.5 3.5 0 0 1 0 7"/><path d="M18.5 5.5a7.5 7.5 0 0 1 0 13" opacity=".7"/><path d="M8 14.5l1 5h2.5l-1-5"/></svg></div>
+        <h3>إدارة الحملات الإعلانية الممولة<small>Media Buying</small></h3>
+        <p>إدارة إعلانات (Meta, Google, TikTok, Snapchat, YouTube) مع استهداف دقيق ومتابعة مستمرة لتحسين تكلفة الوصول للعميل.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M7.5 11.5l2-2.5 1.8 2 2.2-3.5" opacity=".85"/></svg></div>
+        <h3>تحسين محركات البحث<small>SEO &amp; AEO</small></h3>
+        <p>تهيئة موقعك للظهور في نتائج البحث الأولى في جوجل، وفي إجابات محركات الذكاء الاصطناعي مثل ChatGPT وGemini.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8" width="19" height="12" rx="2.5"/><path d="M2.5 11.5h19M6.5 8L5 4l3.5-.8L10 6.5l2.5 1.5M13 6.5l1.5-3.3 3 .7"/><path d="M10 14.2v3.6l3.2-1.8-3.2-1.8z" fill="url(#gg)" stroke="none"/></svg></div>
+        <h3>إنتاج الفيديو والمحتوى الإبداعي<small>Media Production</small></h3>
+        <p>مونتاج إعلانات تجارية، محتوى Reels وTikTok، موشن جرافيك، وتجهيز محتوى مصمم للانتشار.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.6"/><circle cx="17.5" cy="5.5" r="2.6"/><circle cx="17.5" cy="18.5" r="2.6"/><path d="M8.4 10.8l6.8-4M8.4 13.2l6.8 4"/></svg></div>
+        <h3>إدارة حسابات التواصل الاجتماعي<small>Social Media Management</small></h3>
+        <p>بناء استراتيجية محتوى، كتابة إبداعية، تصميمات بصرية، وإدارة تفاعل الجمهور على منصاتك.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M2.5 8h19M5.5 6.2h.01M8 6.2h.01"/><path d="M8.5 21.5h7M12 18v3.5"/><path d="M9.5 11.5l-2 2 2 2M14.5 11.5l2 2-2 2" opacity=".8"/></svg></div>
+        <h3>تصميم وتطوير المواقع<small>Web Development</small></h3>
+        <p>مواقع تعريفية سريعة ومتجاوبة مع الموبايل، مصممة لتحويل الزائر إلى عميل — مثل هذا الموقع.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.7 5.7 6.2.7-4.6 4.2 1.3 6.1L12 16.2l-5.6 3 1.3-6.1L3.1 8.9l6.2-.7L12 2.5z"/><circle cx="12" cy="10.5" r="2" opacity=".7"/></svg></div>
+        <h3>الهوية البصرية وبناء العلامات التجارية<small>Branding</small></h3>
+        <p>تصميم الشعارات، دليل الهوية البصرية الكامل، وتحديد نبرة صوت علامتك لتمييزك عن المنافسين.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"/><path d="M12 7.5l1 2 2 .3-1.5 1.4.4 2.1-1.9-1-1.9 1 .4-2.1L9 9.8l2-.3 1-2z" fill="url(#gg)" stroke="none"/></svg></div>
+        <h3>الرد الآلي وأتمتة خدمة العملاء<small>AI Automation &amp; Chatbots</small></h3>
+        <p>أنظمة رد آلي عبر واتساب وماسنجر وإنستغرام تساعدك في الرد على الاستفسارات المتكررة واستقبال الطلبات على مدار الساعة — والمحادثة ترجع ليك في أي وقت.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon-frame"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 10.5a6.5 6.5 0 0 0 13 0"/><path d="M12 17v3.5M8.5 21.5h7"/><path d="M18.5 4.5c.8 1 1.3 2.2 1.3 3.5M20.8 2.8c1.2 1.5 1.9 3.4 1.9 5.2" opacity=".7"/></svg></div>
+        <h3>التعليق الصوتي والإنتاج الصوتي<small>Voice Over &amp; Audio Production</small></h3>
+        <p>تعليق صوتي عربي احترافي (إعلاني، وثائقي، سرد قصصي) بخبرة تتجاوز 6 سنوات، مع معالجة صوتية كاملة جاهزة للنشر.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Portfolio ===== -->
+<section id="portfolio" class="photo-sec">
+  <div class="bg" style="background-image:url('assets/curtain-stage-blue.jpg')"></div><div class="veil"></div>
+  <div class="container">
+    <span class="kicker">أعمالنا</span>
+    <h2 class="section-title">شغلنا.. شوفه واسمعه بنفسك</h2>
+    <p class="section-sub">نماذج حقيقية من شغل الوكالة: مواقع، إعلانات، محتوى مرئي، وتعليق صوتي — دوس شغّل واحكم بنفسك.</p>
+
+    <h3 class="work-cat">مواقع ومتاجر من تصميمنا</h3>
+    <div class="w-grid">
+      <a class="work-web reveal" href="https://ahmedshaban777-lgtm.github.io/teacher-demo/" target="_blank" rel="noopener">
+        <img src="assets/demo-teacher.jpg" alt="نموذج موقع معلم من تصميمنا" loading="lazy">
+        <div class="meta"><h3>موقع معلم</h3><span>نموذج تعريفي — افتحه وجرّبه ↗</span></div>
+      </a>
+      <a class="work-web reveal" href="https://ahmedshaban777-lgtm.github.io/restaurant-demo/" target="_blank" rel="noopener">
+        <img src="assets/demo-restaurant.jpg" alt="نموذج موقع مطعم بمنيو QR من تصميمنا" loading="lazy">
+        <div class="meta"><h3>مطعم بمنيو QR</h3><span>نموذج تعريفي — افتحه وجرّبه ↗</span></div>
+      </a>
+      <a class="work-web reveal" href="https://ahmedshaban777-lgtm.github.io/clinic-demo/" target="_blank" rel="noopener">
+        <img src="assets/demo-clinic.jpg" alt="نموذج موقع عيادة من تصميمنا" loading="lazy">
+        <div class="meta"><h3>موقع عيادة</h3><span>نموذج تعريفي — افتحه وجرّبه ↗</span></div>
+      </a>
+      <a class="work-web reveal" href="https://ahmedshaban777-lgtm.github.io/shop-demo/" target="_blank" rel="noopener">
+        <img src="assets/demo-shop.jpg" alt="نموذج متجر إلكتروني من تصميمنا" loading="lazy">
+        <div class="meta"><h3>متجر إلكتروني</h3><span>نموذج تعريفي — افتحه وجرّبه ↗</span></div>
+      </a>
+    </div>
+
+    <h3 class="work-cat">إعلانات مرئية</h3>
+    <div class="v-grid">
+      <div class="work-video reveal">
+        <video controls preload="none" poster="assets/ad-orange-travel-poster.jpg" playsinline>
+          <source src="assets/ad-orange-travel-web.mp4" type="video/mp4">
+        </video>
+        <div class="meta"><h3>أورانج ترافيل</h3><span>تعليق صوتي لإعلان</span></div>
+      </div>
+      <div class="work-video reveal">
+        <video controls preload="none" poster="assets/ad-golden-sword-poster.jpg" playsinline>
+          <source src="assets/ad-golden-sword-web.mp4" type="video/mp4">
+        </video>
+        <div class="meta"><h3>السيف الذهبي</h3><span>تعليق صوتي لإعلان</span></div>
+      </div>
+    </div>
+
+    <h3 class="work-cat">تعليق صوتي</h3>
+    <div class="a-grid">
+      <div class="audio-card reveal" data-src="assets/kawkab-atfaly.mp3">
+        <button class="play-btn" aria-label="تشغيل"><svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+        <div class="a-body">
+          <h3>كوكب أطفالي</h3>
+          <div class="tagline">تعليق صوتي — محتوى أطفال</div>
+          <div class="a-progress"><i></i></div>
+          <div class="a-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="audio-card reveal" data-src="assets/wanas-psych.mp3">
+        <button class="play-btn" aria-label="تشغيل"><svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+        <div class="a-body">
+          <h3>ونس</h3>
+          <div class="tagline">تعليق صوتي — دعم نفسي وخواطر</div>
+          <div class="a-progress"><i></i></div>
+          <div class="a-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demos-strip reveal">
+      <p>عايز تشوف نماذج أكتر؟ ده المعرض الكامل:</p>
+      <div class="d-links">
+        <a href="https://ahmedshaban.lovable.app" target="_blank" rel="noopener">معرض الأعمال الكامل ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="founder reveal">
+        <img src="assets/studio-onair-blue.jpg" alt="استوديو التسجيل — Cannavaro Media Agency" loading="lazy">
+        <div class="ring"></div>
+      </div>
+      <div class="about-txt">
+        <span class="kicker">من نحن</span>
+        <h2 class="section-title">لماذا Cannavaro Media Agency؟</h2>
+        <h3>وكالة متكاملة.. <span>بخبرة شغل حقيقي</span></h3>
+        <p>وكالة مصرية أسسها المعلق الصوتي <b style="color:var(--gold-soft)">أحمد شعبان</b> بعد أكثر من 6 سنوات من الشغل الفعلي في التعليق الصوتي والإنتاج — إعلانات ومحتوى سمعته علامات تجارية معروفة.</p>
+        <p>من الخبرة دي بنقدم خدمة متكاملة: صوت، صورة، حملات، ومواقع — بنفس المعيار اللي بنشتغل بيه لنفسنا.</p>
+        <div class="why-grid">
+          <div class="why reveal"><div class="num">1</div><h3>خطة قبل التنفيذ</h3><p>كل مشروع يبدأ بفهم هدفك وجمهورك، وبناء خطة واضحة قبل صرف أي جنيه.</p></div>
+          <div class="why reveal"><div class="num">2</div><h3>جودة إنتاج حقيقية</h3><p>صوت وصورة بمستوى احترافي مبني على سنوات من العمل الفعلي، مش وعود نظرية.</p></div>
+          <div class="why reveal"><div class="num">3</div><h3>شفافية في التقارير</h3><p>تعرف أول بأول أين ذهبت ميزانيتك وماذا حققت، بتقارير واضحة وأرقام حقيقية.</p></div>
+          <div class="why reveal"><div class="num">4</div><h3>سرعة في التنفيذ</h3><p>مواعيد تسليم محددة نلتزم بها، وتواصل مباشر على واتساب في أي وقت.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Packages ===== -->
+<section id="packages" class="photo-sec">
+  <div class="bg" style="background-image:url('assets/studio-bg-blue.jpg')"></div><div class="veil"></div>
+  <div class="container">
+    <span class="kicker">باقاتنا</span>
+    <h2 class="section-title">باقات النمو</h2>
+    <p class="section-sub">اختر الباقة الأقرب لاحتياجك — والتفاصيل النهائية والأسعار تتحدد بعد الاستشارة المجانية حسب حجم مشروعك.</p>
+    <div class="pkg-grid">
+      <div class="card pkg reveal">
+        <h3>باقة الانطلاق</h3>
+        <p class="for">للمشاريع الناشئة التي تبدأ حضورها الرقمي</p>
+        <ul>
+          <li>إدارة حساب تواصل اجتماعي واحد</li>
+          <li>خطة محتوى شهرية</li>
+          <li>تصميمات بصرية أساسية</li>
+          <li>تقرير أداء شهري</li>
+        </ul>
+        <button class="btn btn-ghost pkg-btn" data-pkg="باقة الانطلاق">اطلب الباقة الآن</button>
+      </div>
+      <div class="card pkg featured reveal">
+        <h3>باقة النمو والتوسع</h3>
+        <p class="for">للأنشطة التي تريد نتائج أسرع وحضوراً أوسع</p>
+        <ul>
+          <li>إدارة شاملة لحسابات التواصل</li>
+          <li>إدارة الحملات الإعلانية الممولة</li>
+          <li>إنتاج محتوى مرئي وتعليق صوتي</li>
+          <li>تقارير أداء دورية ومتابعة مستمرة</li>
+        </ul>
+        <button class="btn btn-gold pkg-btn" data-pkg="باقة النمو والتوسع">اطلب الباقة الآن</button>
+      </div>
+      <div class="card pkg reveal">
+        <h3>باقة السيطرة الكاملة</h3>
+        <p class="for">حلول مخصصة للعلامات الطموحة</p>
+        <ul>
+          <li>كل ما في باقة النمو</li>
+          <li>هوية بصرية كاملة وموقع إلكتروني</li>
+          <li>أتمتة الردود وخدمة العملاء</li>
+          <li>خطة نمو سنوية مخصصة</li>
+        </ul>
+        <button class="btn btn-ghost pkg-btn" data-pkg="باقة السيطرة الكاملة">اطلب الباقة الآن</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <span class="kicker">أسئلة شائعة</span>
+    <h2 class="section-title">عندك سؤال؟</h2>
+    <p class="section-sub">أكثر الأسئلة التي تصلنا من العملاء.</p>
+    <div class="faq">
+      <details class="reveal">
+        <summary>متى تظهر نتائج الحملات الإعلانية؟</summary>
+        <p>تختلف حسب المجال والميزانية والمنافسة. عادة تبدأ المؤشرات الأولى خلال الأسابيع الأولى، والنتائج الأوضح تتراكم مع الاستمرارية والتحسين المستمر. لا نعدك بأرقام وهمية — نعدك بخطة واضحة وتقارير صادقة.</p>
+      </details>
+      <details class="reveal">
+        <summary>كيف تتم طريقة العمل معكم؟</summary>
+        <p>نبدأ باستشارة مجانية نفهم فيها نشاطك وهدفك، ثم نقدم خطة وعرض سعر واضحين. بعد الاتفاق نبدأ التنفيذ بمواعيد تسليم محددة، مع تقارير متابعة دورية وتواصل مباشر على واتساب.</p>
+      </details>
+      <details class="reveal">
+        <summary>هل أحصل على تقارير أداء؟</summary>
+        <p>نعم، كل باقة تشمل تقارير دورية توضح ما تم تنفيذه وما تحقق من نتائج، بلغة بسيطة وبدون تعقيد.</p>
+      </details>
+      <details class="reveal">
+        <summary>هل يمكنني طلب خدمة واحدة فقط؟</summary>
+        <p>بالتأكيد. يمكنك طلب تعليق صوتي، أو تصميم موقع، أو إدارة حملة إعلانية كخدمة منفصلة، دون الالتزام بباقة كاملة.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="photo-sec">
+  <div class="bg" style="background-image:url('assets/curtain-stage-blue.jpg')"></div><div class="veil"></div>
+  <div class="container">
+    <span class="kicker">تواصل معنا</span>
+    <h2 class="section-title">جاهز تبدأ؟</h2>
+    <p class="section-sub">املأ النموذج وسنجهز لك رسالة واتساب ببياناتك، أو تواصل معنا مباشرة.</p>
+    <div class="contact-wrap">
+      <form id="leadForm" class="reveal">
+        <div class="field"><label for="name">الاسم الكامل</label><input type="text" id="name" required placeholder="اكتب اسمك"></div>
+        <div class="field"><label for="phone">رقم الهاتف (واتساب)</label><input type="tel" id="phone" required placeholder="01xxxxxxxxx" dir="rtl"></div>
+        <div class="field"><label for="company">اسم الشركة / المشروع</label><input type="text" id="company" placeholder="اختياري"></div>
+        <div class="field">
+          <label for="service">الخدمة المطلوبة</label>
+          <select id="service" required>
+            <option value="" disabled selected>اختر الخدمة</option>
+            <option>إدارة الحملات الإعلانية الممولة</option>
+            <option>تحسين محركات البحث (SEO)</option>
+            <option>إنتاج الفيديو والمحتوى الإبداعي</option>
+            <option>إدارة حسابات التواصل الاجتماعي</option>
+            <option>تصميم وتطوير المواقع</option>
+            <option>الهوية البصرية وبناء العلامات التجارية</option>
+            <option>الرد الآلي وأتمتة خدمة العملاء</option>
+            <option>التعليق الصوتي والإنتاج الصوتي</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">الميزانية التقريبية</label>
+          <select id="budget">
+            <option value="" disabled selected>اختر الميزانية (اختياري)</option>
+            <option>أقل من 5,000 جنيه</option>
+            <option>5,000 - 15,000 جنيه</option>
+            <option>15,000 - 50,000 جنيه</option>
+            <option>أكثر من 50,000 جنيه</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-whatsapp" style="width:100%">إرسال الطلب عبر واتساب</button>
+        <p class="form-note">بالضغط على الزر سيفتح واتساب برسالة جاهزة تحتوي بياناتك — راجعها واضغط إرسال.</p>
+      </form>
+      <div class="contact-side">
+        <div class="card reveal">
+          <h3>تواصل مباشر</h3>
+          <p>فضّلت الكلام مباشرة؟ راسلنا على واتساب وسنرد عليك في أقرب وقت.</p>
+          <p style="margin-top:10px"><a class="val" href="https://wa.me/201212139929" target="_blank" rel="noopener">0121 213 9929</a></p>
+          <a class="btn btn-whatsapp" style="margin-top:14px;width:100%" href="https://wa.me/201212139929?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20Cannavaro%20Media%20Agency" target="_blank" rel="noopener">تواصل معنا مباشرة عبر واتساب</a>
+        </div>
+        <div class="card reveal">
+          <h3>استشارة مجانية</h3>
+          <p>أول استشارة مجانية بالكامل: نسمع فكرتك، ونقترح عليك الطريق الأنسب — بدون أي التزام.</p>
+        </div>
+        <div class="card reveal">
+          <h3>البريد الإلكتروني</h3>
+          <p><a class="val" href="mailto:ahmed.shaban777@outlook.com">ahmed.shaban777@outlook.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Cannavaro Media Agency</h4>
+        <p>وكالة كانافارو للدعاية والإعلان والتسويق الرقمي — نصنع حضوراً رقمياً يليق بعلامتك: صوت، صورة، حملات، ومواقع.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#packages">باقاتنا</a></li>
+          <li><a href="#portfolio">أعمالنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#services">الحملات الإعلانية</a></li>
+          <li><a href="#services">إنتاج الفيديو والمحتوى</a></li>
+          <li><a href="#services">إدارة السوشيال ميديا</a></li>
+          <li><a href="#services">تصميم المواقع</a></li>
+          <li><a href="#services">الهوية البصرية</a></li>
+          <li><a href="#services">التعليق الصوتي</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 <b>Cannavaro Media Agency</b>. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/201212139929?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20Cannavaro%20Media%20Agency" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+<script>
+// Mobile menu
+var toggle=document.getElementById('menuToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',function(){links.classList.toggle('open')});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+
+// Reveal on scroll (transform-only; content always readable)
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('pre');io.observe(el)});
+}
+
+// Custom audio players (one shared Audio)
+var cur=null,curCard=null;
+document.querySelectorAll('.audio-card').forEach(function(card){
+  var btn=card.querySelector('.play-btn'),bar=card.querySelector('.a-progress i');
+  btn.addEventListener('click',function(){
+    if(curCard===card && cur && !cur.paused){cur.pause();return}
+    if(cur){cur.pause();if(curCard)curCard.classList.remove('playing')}
+    if(!cur||curCard!==card){
+      cur=new Audio(card.getAttribute('data-src'));
+      cur.addEventListener('timeupdate',function(){
+        if(cur.duration)bar.style.width=(cur.currentTime/cur.duration*100)+'%';
+      });
+      cur.addEventListener('ended',function(){card.classList.remove('playing');bar.style.width='0%'});
+    }
+    curCard=card;cur.play();card.classList.add('playing');
+  });
+});
+// pause audio if a video starts
+document.querySelectorAll('video').forEach(function(v){
+  v.addEventListener('play',function(){if(cur&&!cur.paused)cur.pause();if(curCard)curCard.classList.remove('playing')});
+});
+
+// WhatsApp helper
+var WA='201212139929';
+function openWA(text){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(text),'_blank')}
+document.querySelectorAll('.pkg-btn').forEach(function(b){
+  b.addEventListener('click',function(){openWA('أهلاً، أريد طلب '+b.getAttribute('data-pkg')+' من Cannavaro Media Agency. ممكن التفاصيل؟')});
+});
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return document.getElementById(id).value.trim()};
+  var msg='طلب جديد من موقع Cannavaro Media Agency:\n'
+    +'الاسم: '+v('name')+'\n'
+    +'رقم الهاتف: '+v('phone')+'\n'
+    +(v('company')?'الشركة/المشروع: '+v('company')+'\n':'')
+    +'الخدمة المطلوبة: '+v('service')+'\n'
+    +(v('budget')?'الميزانية التقريبية: '+v('budget'):'');
+  openWA(msg);
+});
+</script>
+</body>
+</html>

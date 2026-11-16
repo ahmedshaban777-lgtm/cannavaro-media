@@ -27,6 +27,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 
 /* ===== HERO ===== */
 .hero{padding:clamp(24px,5vh,54px) clamp(18px,4vw,56px) 0;text-align:center;position:relative}
+.hero .shape{position:absolute;pointer-events:none;z-index:2}
+.hero .star-hero{top:16%;right:6%;width:clamp(40px,6vw,72px);animation:spin 14s linear infinite}
 .hero .kicker{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.5px;background:var(--mint);border:2px solid var(--ink);border-radius:99px;padding:6px 18px;box-shadow:3px 3px 0 var(--ink);transform:rotate(2deg)}
 .brand{display:block;font-size:clamp(64px,16.5vw,215px);line-height:.95;margin:22px 0 6px;color:var(--ink);text-shadow:.045em .045em 0 var(--orange);letter-spacing:.01em}
 .brand-sub{font-size:clamp(12px,2.2vw,20px);letter-spacing:.55em;font-weight:800;color:var(--ink);opacity:.75;margin-bottom:26px}
@@ -145,6 +147,7 @@ footer .preview-tag{background:var(--yellow);color:var(--ink);border:2px solid v
 <header class="hero">
   <span class="kicker">وكالة دعاية وتسويق رقمي</span>
   <h1 class="brand latin" dir="ltr">CANNAVARO</h1>
+  <svg class="shape star-hero" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FF4D00" stroke="#141414" stroke-width="2"/></svg>
   <div class="brand-sub" dir="ltr">MEDIA <i>•</i> CONTENT <i>•</i> WEB</div>
 
   <div class="hero-grid">

@@ -50,8 +50,8 @@ header{position:fixed;inset-inline:0;top:0;z-index:50;background:rgba(10,10,12,.
 
 /* ===== Hero ===== */
 .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;background:var(--bg)}
-.hero .bg{position:absolute;inset:0;background:url('assets/hero-bg.jpg') center/cover no-repeat;opacity:.55}
-.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.55),rgba(10,10,12,.82) 55%,var(--bg))}
+.hero .bg{position:absolute;inset:0;background:url('assets/hero-collage.jpg') center/cover no-repeat;opacity:.6}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.6),rgba(10,10,12,.78) 55%,var(--bg))}
 .hero-inner{position:relative;z-index:1;max-width:780px}
 .hero h1{font-size:clamp(2.1rem,6.5vw,3.7rem);font-weight:900;line-height:1.35;margin:18px 0 20px;text-shadow:0 4px 30px rgba(0,0,0,.7)}
 .hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold-soft),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -261,7 +261,6 @@ footer{border-top:1px solid rgba(212,175,55,.14);padding:50px 0 28px;background:
 <section class="hero" id="home">
   <div class="bg"></div><div class="veil"></div>
   <div class="container hero-inner">
-    <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <span class="kicker">وكالة كانافارو للدعاية والإعلان والتسويق الرقمي</span>
     <h1>نُحوّل رؤيتك إلى <em>هيمنة رقمية</em>.. ونصنع علامات تجارية لا تُنسى.</h1>
     <p class="sub">في <b>Cannavaro Media Agency</b>، نجمع بين الإبداع البصري، واستراتيجيات النمو المدروسة، وأحدث تقنيات الذكاء الاصطناعي لبناء حضور رقمي استثنائي لعلامتك التجارية.</p>
@@ -270,7 +269,6 @@ footer{border-top:1px solid rgba(212,175,55,.14);padding:50px 0 28px;background:
       <a class="btn btn-ghost" href="#portfolio">شوف شغلنا بنفسك</a>
     </div>
     <div class="trust reveal">
-      <div><b>+6 سنوات خبرة</b><span>في الإعلام والإنتاج والتسويق الرقمي</span></div>
       <div><b>شغل حقيقي يتشاف</b><span>مواقع وإعلانات ومحتوى — جرّبه تحت</span></div>
       <div><b>وضوح كامل</b><span>خطة عمل وتقارير متابعة مع كل مشروع</span></div>
     </div>
@@ -390,15 +388,8 @@ footer{border-top:1px solid rgba(212,175,55,.14);padding:50px 0 28px;background:
       </div>
     </div>
 
-    <h3 class="work-cat">تعليق صوتي ومحتوى مرئي</h3>
-    <div class="mix-grid">
-      <div class="work-video reel reveal">
-        <video controls preload="none" poster="assets/reel-events-poster.jpg" playsinline>
-          <source src="assets/reel-events-web.mp4" type="video/mp4">
-        </video>
-        <div class="meta"><h3>ريل منتجات</h3><span>محتوى مرئي للسوشيال ميديا</span></div>
-      </div>
-      <div class="a-stack">
+    <h3 class="work-cat">تعليق صوتي</h3>
+    <div class="a-grid">
       <div class="audio-card reveal" data-src="assets/kawkab-atfaly.mp3">
         <button class="play-btn" aria-label="تشغيل"><svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
         <div class="a-body">
@@ -416,7 +407,6 @@ footer{border-top:1px solid rgba(212,175,55,.14);padding:50px 0 28px;background:
           <div class="a-progress"><i></i></div>
           <div class="a-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </div>
-      </div>
       </div>
     </div>
 

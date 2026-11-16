@@ -55,8 +55,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px c
 .frame .bar i:first-child{background:var(--acc)}
 .frame .bar .url{flex:1;height:16px;border-radius:8px;background:#ECECEA;margin-right:8px}
 .wire{display:grid;grid-template-columns:64px 1fr;min-height:270px}
-@media(max-width:560px){.wire{grid-template-columns:1fr}.w-side{display:none}}
 .w-side{background:var(--ink);padding:16px 12px;display:grid;gap:10px;align-content:start}
+@media(max-width:560px){.wire{grid-template-columns:1fr}.wire .w-side{display:none}}
 .w-side i{width:26px;height:26px;border-radius:8px;background:#2A2A30;display:block}
 .w-side i.on{background:var(--acc)}
 .w-main{padding:18px;display:grid;gap:12px;align-content:start}

@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-(function(){var h=document.documentElement;
-try{if(localStorage.getItem('cnv-motion')==='on')h.classList.add('motion-on')}catch(e){}
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)h.classList.add('rm');
-if(/[?&]rm=1/.test(location.search))h.classList.add('rm');
-})();
-</script>
 <title>كانافارو — تصور مبدئي (أ)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,7 +133,6 @@ footer .preview-tag{background:var(--yellow);color:var(--ink);border:2px solid v
 /* reveal */
 .rv{opacity:1;transform:translateY(26px);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.on{transform:none}
-html.rm:not(.motion-on) .rv{transform:none;transition:none}html.rm:not(.motion-on) .marquee-track,html.rm:not(.motion-on) .f1,html.rm:not(.motion-on) .f2,html.rm:not(.motion-on) .f3,html.rm:not(.motion-on) .f4,html.rm:not(.motion-on) .slogan-badge .dot,html.rm:not(.motion-on) .star2,html.rm:not(.motion-on) .ring2{animation:none}
 </style>
 </head>
 <body>
@@ -397,25 +389,6 @@ document.querySelectorAll('.svc').forEach(card=>{
   card.addEventListener('click',t);
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}});
 });
-</script>
-<style>.motion-toggle{background:var(--cream);color:var(--ink);border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}</style>
-<style>
-.motion-toggle{position:fixed;bottom:16px;inset-inline-start:16px;z-index:80;font-family:inherit;font-size:13px;font-weight:800;padding:9px 16px;border-radius:99px;cursor:pointer}
-.motion-toggle[hidden]{display:none}
-</style>
-<button id="motionToggle" class="motion-toggle" type="button" hidden>تشغيل الحركة</button>
-<script>
-(function(){var h=document.documentElement,b=document.getElementById('motionToggle');
-if(!h.classList.contains('rm'))return;
-b.hidden=false;
-function paint(){b.textContent=h.classList.contains('motion-on')?'إيقاف الحركة':'تشغيل الحركة'}
-paint();
-b.addEventListener('click',function(){
-h.classList.toggle('motion-on');
-try{localStorage.setItem('cnv-motion',h.classList.contains('motion-on')?'on':'off')}catch(e){}
-paint();
-});
-})();
 </script>
 </body>
 </html>

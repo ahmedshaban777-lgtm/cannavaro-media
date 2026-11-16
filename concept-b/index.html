@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-(function(){var h=document.documentElement;
-try{if(localStorage.getItem('cnv-motion')==='on')h.classList.add('motion-on')}catch(e){}
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)h.classList.add('rm');
-if(/[?&]rm=1/.test(location.search))h.classList.add('rm');
-})();
-</script>
 <title>كانافارو — تصور مبدئي (ب)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -160,7 +153,6 @@ footer .preview-tag{border:1px solid #3A3A40;border-radius:8px;padding:2px 10px;
 /* reveal — calm, transform only */
 .rv{opacity:1;transform:translateY(22px);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.on{transform:none}
-html.rm:not(.motion-on) .rv{transform:none;transition:none}html.rm:not(.motion-on) .el,html.rm:not(.motion-on) .stamp{animation:none}
 </style>
 </head>
 <body>
@@ -370,25 +362,6 @@ document.querySelectorAll('.svc').forEach(row=>{
   row.addEventListener('click',t);
   row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}});
 });
-</script>
-<style>.motion-toggle{background:#fff;color:var(--ink);border:1.5px solid var(--line)}</style>
-<style>
-.motion-toggle{position:fixed;bottom:16px;inset-inline-start:16px;z-index:80;font-family:inherit;font-size:13px;font-weight:800;padding:9px 16px;border-radius:99px;cursor:pointer}
-.motion-toggle[hidden]{display:none}
-</style>
-<button id="motionToggle" class="motion-toggle" type="button" hidden>تشغيل الحركة</button>
-<script>
-(function(){var h=document.documentElement,b=document.getElementById('motionToggle');
-if(!h.classList.contains('rm'))return;
-b.hidden=false;
-function paint(){b.textContent=h.classList.contains('motion-on')?'إيقاف الحركة':'تشغيل الحركة'}
-paint();
-b.addEventListener('click',function(){
-h.classList.toggle('motion-on');
-try{localStorage.setItem('cnv-motion',h.classList.contains('motion-on')?'on':'off')}catch(e){}
-paint();
-});
-})();
 </script>
 </body>
 </html>

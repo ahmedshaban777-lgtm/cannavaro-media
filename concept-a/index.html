@@ -23,6 +23,30 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Cairo',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(900px 520px at 88% -6%,rgba(255,77,0,.16),transparent 62%),
+  radial-gradient(820px 560px at 6% 30%,rgba(201,188,255,.13),transparent 60%),
+  radial-gradient(760px 620px at 78% 88%,rgba(158,230,184,.09),transparent 62%),
+  linear-gradient(168deg,#17181F 0%,#101018 46%,#0C0D13 100%)}
+.services,.contact,footer{background:var(--cream)}
+.hero{color:#F4EFE6}
+.hero .brand{color:var(--cream)}
+.hero .brand-sub{color:#E8E2D8;opacity:.8}
+.hero .def{color:#CFC9BE}
+.hero .def b{color:#FFF6EC}
+.hero .def .mark{color:var(--ink)}
+.hero .illo-cap{color:#A8A2B4}
+.hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-bg .wl{fill:none;stroke-linecap:round;stroke-dasharray:3 14;animation:wdrift 26s linear infinite}
+.hero-bg .wl2{animation-duration:34s;animation-direction:reverse}
+.hero-bg .wl3{animation-duration:44s}
+@keyframes wdrift{to{stroke-dashoffset:-340}}
+.hero-bg .glow{animation:gpulse 9s ease-in-out infinite}
+.hero-bg .glow2{animation-duration:12s;animation-delay:-4s}
+@keyframes gpulse{50%{opacity:.45}}
+nav .nav-brand,nav .nav-svc{color:var(--cream)}
+
 a{text-decoration:none;color:inherit}
 .latin{font-family:'Anton',sans-serif;font-weight:400}
 
@@ -40,6 +64,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 /* ===== HERO ===== */
 .hero{padding:clamp(24px,5vh,54px) clamp(18px,4vw,56px) 0;text-align:center;position:relative}
 .hero .shape{position:absolute;pointer-events:none;z-index:2}
+.hero>*:not(.hero-bg):not(.shape){position:relative;z-index:2}
 .hero .star-hero{top:16%;right:6%;width:clamp(40px,6vw,72px);animation:spin 14s linear infinite}
 .hero .kicker{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.5px;background:var(--mint);border:2px solid var(--ink);border-radius:99px;padding:6px 18px;box-shadow:3px 3px 0 var(--ink);transform:rotate(2deg)}
 .brand{display:block;font-size:clamp(64px,16.5vw,215px);line-height:.95;margin:22px 0 6px;color:var(--ink);text-shadow:.045em .045em 0 var(--orange);letter-spacing:.01em}
@@ -192,6 +217,16 @@ footer .preview-tag{background:var(--yellow);color:var(--ink);border:2px solid v
 </nav>
 
 <header class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <circle class="glow" cx="1230" cy="120" r="200" fill="rgba(255,77,0,.10)"/>
+      <circle class="glow glow2" cx="150" cy="640" r="230" fill="rgba(201,188,255,.08)"/>
+      <path class="wl"  d="M-40 240 Q120 190 280 240 T600 240 T920 240 T1240 240 T1560 240" stroke="rgba(255,210,63,.30)" stroke-width="2"/>
+      <path class="wl wl2" d="M-40 420 Q120 370 280 420 T600 420 T920 420 T1240 420 T1560 420" stroke="rgba(158,230,184,.26)" stroke-width="2"/>
+      <path class="wl wl3" d="M-40 610 Q120 560 280 610 T600 610 T920 610 T1240 610 T1560 610" stroke="rgba(201,188,255,.24)" stroke-width="2"/>
+      <path class="wl wl2" d="M-40 780 Q120 735 280 780 T600 780 T920 780 T1240 780 T1560 780" stroke="rgba(255,179,199,.20)" stroke-width="2"/>
+    </svg>
+  </div>
   <span class="kicker">وكالة دعاية وتسويق رقمي</span>
   <h1 class="brand latin" dir="ltr">CANNAVARO</h1>
   <svg class="shape star-hero" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FF4D00" stroke="#141414" stroke-width="2"/></svg>

@@ -91,6 +91,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 .mark{position:relative;white-space:nowrap}
 .mark::before{content:"";position:absolute;inset:auto -2px 2px -2px;height:.62em;z-index:-1;border-radius:3px;transform:skew(-8deg)}
 html[data-theme="dark"] .mark::before{inset:auto -2px .08em -2px;height:.86em;transform:skew(-8deg) rotate(-.8deg)}
+html[data-theme="dark"] .hero .def .mark{color:var(--text)}
+html[data-theme="dark"] .mark.y::before{background:#8A6800}
+html[data-theme="dark"] .mark.m::before{background:#1F7A52}
+html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 .mark.y::before{background:var(--yellow)}
 .mark.m::before{background:var(--mint)}
 .mark.l::before{background:var(--lav)}

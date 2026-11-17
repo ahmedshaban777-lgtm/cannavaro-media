@@ -88,6 +88,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 .def b{color:var(--ink)}
 .mark{position:relative;white-space:nowrap}
 .mark::before{content:"";position:absolute;inset:auto -2px 2px -2px;height:.62em;z-index:-1;border-radius:3px;transform:skew(-8deg)}
+html[data-theme="dark"] .mark::before{inset:-2px -3px;height:auto}
 .mark.y::before{background:var(--yellow)}
 .mark.m::before{background:var(--mint)}
 .mark.l::before{background:var(--lav)}
@@ -160,7 +161,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 .svc h3{font-size:20px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:8px}
 .svc .plus{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;line-height:1;transition:transform .3s,background .3s;background:var(--bg)}
 .svc.open .plus{transform:rotate(45deg);background:var(--yellow)}
-.svc p{font-size:14.5px;line-height:1.8;color:#54504a;font-weight:600}
+.svc p{font-size:14.5px;line-height:1.8;color:var(--muted);font-weight:600}
 .svc .svc-details{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1)}
 .svc.open .svc-details{max-height:220px}
 .svc .svc-details ul{list-style:none;margin-top:12px;border-top:2px dashed var(--dash);padding-top:12px;display:grid;gap:8px}

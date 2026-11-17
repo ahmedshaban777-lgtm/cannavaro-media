@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="fonts/fonts.css?v=2">
-<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('cannavaro-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+<script>document.documentElement.classList.add('js');try{document.documentElement.setAttribute('data-theme',localStorage.getItem('cannavaro-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 <style>
 :root{
   --ink:#141414; --cream:#FFF6EC;
@@ -76,8 +76,9 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:20px c
 .hero>*:not(.hero-bg):not(.shape){position:relative;z-index:2}
 .hero .star-hero{top:16%;right:6%;width:clamp(40px,6vw,72px);animation:spin 14s linear infinite}
 .hero .kicker{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.5px;background:var(--mint);border:2px solid var(--ink);border-radius:99px;padding:6px 18px;box-shadow:3px 3px 0 var(--ink);transform:rotate(2deg)}
-.brand{display:block;font-size:clamp(64px,16.5vw,215px);line-height:.95;margin:22px 0 6px;color:var(--ink);text-shadow:.045em .045em 0 var(--orange);letter-spacing:.01em;opacity:0}
-html.fonts-ready .brand{opacity:1;animation:brandIn .8s cubic-bezier(.2,.7,.2,1) both,brandShadow .7s .45s cubic-bezier(.2,.7,.2,1) both}
+.brand{display:block;font-size:clamp(64px,16.5vw,215px);line-height:.95;margin:22px 0 6px;color:var(--ink);text-shadow:.045em .045em 0 var(--orange);letter-spacing:.01em}
+html.js .brand{opacity:0}
+html.js.fonts-ready .brand{opacity:1;animation:brandIn .8s cubic-bezier(.2,.7,.2,1) both,brandShadow .7s .45s cubic-bezier(.2,.7,.2,1) both}
 @keyframes brandIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 @keyframes brandShadow{from{text-shadow:0 0 0 var(--orange)}to{text-shadow:.045em .045em 0 var(--orange)}}
 .brand-sub{font-size:clamp(12px,2.2vw,20px);letter-spacing:.55em;font-weight:800;color:var(--ink);opacity:.75;margin-bottom:26px}

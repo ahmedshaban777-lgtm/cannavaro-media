@@ -23,7 +23,7 @@ PINK = (255, 179, 199)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ANTON = os.path.join(HERE, "anton-latin.woff2")
-CAIRO = os.path.join(HERE, "cairo-arabic.woff2")
+CAIRO = os.path.join(HERE, "cairo-arabic-full.ttf")
 
 def sc(v): return int(round(v * SS))
 def clamp(v, a=0.0, b=1.0): return max(a, min(b, v))
@@ -272,7 +272,7 @@ def scene_finale(t, fonts):
         kd = ImageDraw.Draw(kl)
         kb = kd.textbbox((0,0), arabic_kick, font=f_cairo_kick)
         kd.text((sc(960)-(kb[2]-kb[0])//2, sc(250)-kb[1]), arabic_kick, font=f_cairo_kick,
-                fill=(244,239,230, int(200*ka)))
+                fill=(244,239,230, int(255*ka)))
         im.alpha_composite(kl)
     # sub
     sa = prog(t, 1.25, 1.65)
@@ -415,13 +415,12 @@ def main():
     n0 = int(sys.argv[2]) if len(sys.argv) > 2 else 0
     n1 = int(sys.argv[3]) if len(sys.argv) > 3 else NFRAMES
     os.makedirs(out, exist_ok=True)
-    import arabic_reshaper
-    from bidi.algorithm import get_display
-    def shaped(s): return get_display(arabic_reshaper.reshape(s))
+    def shaped(s): return s  # RAQM layout engine shapes/bidi-orders raw Arabic
     f_anton_big = ImageFont.truetype(ANTON, sc(300))
     f_anton_sub = ImageFont.truetype(ANTON, sc(48))
-    f_cairo_kick = ImageFont.truetype(CAIRO, sc(58))
-    f_cairo_word = ImageFont.truetype(CAIRO, sc(300))
+    f_cairo_kick = ImageFont.truetype(CAIRO, sc(62), layout_engine=ImageFont.Layout.RAQM)
+    f_cairo_kick.set_variation_by_axes([700])
+    f_cairo_word = ImageFont.truetype(CAIRO, sc(300), layout_engine=ImageFont.Layout.RAQM)
     f_cairo_word.set_variation_by_axes([900])
     fonts = (f_anton_big, f_anton_sub, f_cairo_kick, shaped("وكالة دعاية وتسويق رقمي"), f_cairo_word)
     # patch scene words through shaping

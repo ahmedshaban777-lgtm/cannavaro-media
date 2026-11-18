@@ -246,7 +246,8 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 .brands-row{display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,48px);flex-wrap:nowrap}
 .brands-row img{display:block;height:auto;max-width:100%;object-fit:contain}
 .brands-row .b-ald{width:clamp(70px,7vw,100px)}
-.brands-row .b-ms{width:clamp(200px,24vw,340px)}
+.brands-row .b-ms{width:clamp(200px,24vw,340px);border-radius:7%/28%}
+.brands-row .b-pp{display:block;background:#14131F;border-radius:14px;padding:clamp(14px,1.6vw,22px) clamp(16px,2vw,28px)}.brands-row .b-pp img{width:100%}
 .brands-row .b-mw{width:clamp(180px,22vw,320px)}
 .brands-row .b-pp{width:clamp(200px,24vw,340px)}
 @media(max-width:700px){.brands-row{flex-direction:column;gap:26px}.brands-row .b-ald{width:84px}.brands-row .b-ms,.brands-row .b-mw,.brands-row .b-pp{width:min(300px,80%)}}
@@ -491,9 +492,9 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
   </div>
   <div class="brands-row">
     <img class="b-ald" src="brands/aldowly.png" alt="Aldowly" loading="lazy">
-    <img class="b-ms" src="brands/mirror-store.png" alt="Mirror Store" loading="lazy">
+    <img class="b-ms" src="brands/mirror-store.jpg" alt="Mirror Store" loading="lazy">
     <img class="b-mw" src="brands/mirror-world.png" alt="Mirror World" loading="lazy">
-    <img class="b-pp" src="brands/performance-peak.png" alt="Performance Peak" loading="lazy">
+    <span class="b-pp"><img src="brands/performance-peak-white.png" alt="Performance Peak" loading="lazy"></span>
   </div>
 </section>
 

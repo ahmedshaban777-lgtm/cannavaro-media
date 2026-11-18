@@ -256,7 +256,7 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 
 <nav>
   <div class="nav-brand">كانافارو<sup>®</sup></div>
-  <div class="nav-side"><button id="themeToggle" type="button" aria-label="التبديل للوضع الليلي" title="الوضع الليلي"><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 13A8 8 0 1 1 11 4a6.5 6.5 0 0 0 9 9z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button><a class="nav-svc" href="#services">الخدمات</a><a class="nav-cta" href="https://wa.me/201212139929" target="_blank" rel="noopener">تواصل معنا</a></div>
+  <div class="nav-side"><button id="themeToggle" type="button" aria-label="التبديل للوضع الليلي" title="الوضع الليلي"><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 13A8 8 0 1 1 11 4a6.5 6.5 0 0 0 9 9z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button><a class="nav-svc" href="#services">الخدمات</a><a class="nav-cta" href="#contact" target="_blank" rel="noopener">تواصل معنا</a></div>
 </nav>
 
 <header class="hero">
@@ -365,7 +365,7 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
   </div>
 
   <div class="hero-ctas">
-    <a class="btn btn-solid" href="https://wa.me/201212139929" target="_blank" rel="noopener">ابدأ مشروعك</a>
+    <a class="btn btn-solid" href="#contact" >ابدأ مشروعك</a>
     <a class="btn btn-ghost" href="#services">شوف خدماتنا</a>
   </div>
   </div>
@@ -487,7 +487,7 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 <section class="brands rv" id="brands">
   <div class="sec-head">
     <h2 class="sec-title">براندات <span class="latin" dir="ltr">BRANDS</span></h2>
-    <p class="sec-note">براندات اشتغلنا معاها، وتفاصيل الشغل هتتضاف قريبًا.</p>
+    <p class="sec-note">اشتغلنا معاهم بشكل حقيقي، من خبرات فريقنا السابقة قبل تأسيس كانافارو.</p>
   </div>
   <div class="brands-row">
     <img class="b-ald" src="brands/aldowly.png" alt="Aldowly" loading="lazy">
@@ -545,14 +545,8 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 <section class="contact rv" id="contact">
   <span class="mini">خلّينا نتكلم</span>
   <h2>جاهز <span class="latin" dir="ltr">نبدأ؟</span></h2>
-  <p>احكيلنا عن مشروعك على واتساب، وهنرد عليك بخطة واضحة.</p>
-  <div class="btns">
-    <a class="btn btn-wa" href="https://wa.me/201212139929" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 004.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.6-.2z"/></svg>
-      واتساب
-    </a>
-    <a class="btn btn-mail" href="mailto:ahmed.shaban777@outlook.com">ahmed.shaban777@outlook.com</a>
-  </div>
+  <p>قنوات التواصل هتتضاف قبل النشر.</p>
+  
 </section>
 
 <footer>
@@ -573,7 +567,7 @@ document.querySelectorAll('.svc').forEach(card=>{
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}});
   const name=card.querySelector('h3').childNodes[0].textContent.trim();
   const cta=card.querySelector('.svc-cta');
-  if(cta){cta.href='https://wa.me/201212139929?text='+encodeURIComponent('أهلًا كانافارو، مهتم بخدمة «'+name+'» وعايز أعرف تفاصيل أكتر.');cta.addEventListener('click',e=>e.stopPropagation())}
+  if(cta){cta.href='#contact';cta.addEventListener('click',e=>e.stopPropagation())}
 });
 const tg=document.getElementById('themeToggle');
 const setT=t=>{document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('cannavaro-theme',t)}catch(e){} const l=t==='dark'?'التبديل للوضع الفاتح':'التبديل للوضع الليلي';tg.setAttribute('aria-label',l);tg.setAttribute('title',l)};

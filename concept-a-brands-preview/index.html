@@ -210,13 +210,21 @@ html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 
 /* ===== CONTACT ===== */
 .contact{text-align:center;padding:clamp(70px,12vh,130px) clamp(18px,4vw,56px)}
-.contact .mini{font-weight:800;font-size:14px;background:var(--lav);border:2px solid var(--ink);border-radius:99px;padding:6px 18px;display:inline-block;box-shadow:3px 3px 0 var(--ink);transform:rotate(1.5deg)}
+.contact .mini{font-weight:800;font-size:14px;background:var(--mint);color:#14131F;border:2px solid var(--ink);border-radius:99px;padding:6px 18px;display:inline-block;box-shadow:3px 3px 0 var(--ink);transform:rotate(1.5deg)}
 .contact h2{font-size:clamp(44px,9vw,104px);font-weight:900;margin:22px 0 10px}
 .contact h2 .latin{text-shadow:.05em .05em 0 var(--yellow)}
 .contact p{color:var(--muted);font-weight:600;font-size:17px;margin-bottom:32px}
 .contact-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px}
 .contact-mascot{width:clamp(190px,52vw,240px);height:auto;display:block;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
 @media(min-width:820px){.contact-inner{flex-direction:row;justify-content:center;gap:64px}.contact-mascot{width:300px}.contact-text{text-align:center}}
+
+html[data-theme="dark"] .contact{position:relative;overflow:hidden;background:
+ radial-gradient(520px 340px at 82% 30%,rgba(255,77,0,.20),transparent 65%),
+ radial-gradient(480px 340px at 12% 70%,rgba(201,188,255,.17),transparent 65%),
+ radial-gradient(420px 300px at 50% 105%,rgba(158,230,184,.13),transparent 65%),var(--bg)}
+html[data-theme="dark"] .contact::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;border:2px dashed rgba(255,210,63,.35);top:12%;left:7%;pointer-events:none;animation:spin 40s linear infinite}
+html[data-theme="dark"] .contact::after{content:"";position:absolute;width:70px;height:70px;border-radius:18px;background:rgba(158,230,184,.14);bottom:14%;right:8%;transform:rotate(14deg);pointer-events:none}
+.contact-inner{position:relative;z-index:1}
 .contact .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .btn-wa{background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:10px}
 .btn-wa:hover{background:var(--orange)}
@@ -255,18 +263,18 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 .steps,.services,.contact,footer,.statement,.marquee,.slogan-badge{transition:background-color .35s ease,border-color .35s ease}
 .hero,.brand,.brand-sub,.def,.sec-note,.nav-brand,.nav-svc{transition:color .35s ease}
 
-.brands{padding:clamp(34px,6vh,64px) clamp(12px,4vw,56px) clamp(40px,7vh,72px);text-align:center;border-top:2.5px solid var(--line)}
-.brands-head h2{text-wrap:balance;font-size:clamp(20px,3.6vw,34px);font-weight:900;line-height:1.4}
-.brands-head .mini{font-weight:800;font-size:13px;background:var(--lav);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:4px 14px;display:inline-block;box-shadow:3px 3px 0 var(--ink);transform:rotate(-1.5deg);margin-top:10px}
-.brands .brands-row{margin-top:clamp(20px,3.5vh,32px)}
-.brands-row{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3vw,48px);flex-wrap:nowrap}
+.brands{padding:clamp(22px,4vh,38px) clamp(12px,4vw,56px) clamp(24px,4.5vh,42px);text-align:center;border-top:2.5px solid var(--line)}
+.brands-head h2{text-wrap:balance;font-size:clamp(14px,2.2vw,20px);font-weight:900;line-height:1.4}
+.brands-head .mini{font-weight:800;font-size:11px;background:var(--lav);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:4px 14px;display:inline-block;box-shadow:3px 3px 0 var(--ink);transform:rotate(-1.5deg);margin-top:10px}
+.brands .brands-row{margin-top:clamp(12px,2vh,18px);opacity:.88}
+.brands-row{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2.4vw,32px);flex-wrap:nowrap}
 .brands-row img{display:block;height:auto;max-width:100%;object-fit:contain}
 .brands-row .plate{display:block;background:#FFF6EC;border:2px solid var(--line);box-shadow:2px 2px 0 var(--shadow);border-radius:clamp(6px,1vw,12px);padding:clamp(4px,1vw,12px) clamp(5px,1.2vw,16px)}
 .brands-row .b-ms{border:2px solid var(--line);box-shadow:2px 2px 0 var(--shadow)}
-.brands-row .b-ald{width:clamp(26px,6.4vw,56px)}
-.brands-row .b-ms{width:clamp(78px,20vw,220px);border-radius:7%/28%}
-.brands-row .b-mw{width:clamp(80px,18vw,190px)}
-.brands-row .b-pp{display:block;width:clamp(78px,20vw,220px);background:#14131F;border:2px solid var(--line);box-shadow:2px 2px 0 var(--shadow);border-radius:clamp(6px,1vw,12px);padding:clamp(4px,1vw,12px) clamp(5px,1.2vw,16px)}
+.brands-row .b-ald{width:clamp(18px,4.2vw,36px)}
+.brands-row .b-ms{width:clamp(56px,13vw,140px);border-radius:7%/28%}
+.brands-row .b-mw{width:clamp(56px,12vw,124px)}
+.brands-row .b-pp{display:block;width:clamp(56px,13vw,140px);background:#14131F;border:2px solid var(--line);box-shadow:2px 2px 0 var(--shadow);border-radius:clamp(6px,1vw,12px);padding:clamp(4px,1vw,12px) clamp(5px,1.2vw,16px)}
 .brands-row .b-pp img{width:100%}
 
 /* illustration entrance: window, phone, camera, megaphone one after another, then calm settle */
@@ -603,11 +611,11 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 <section class="contact rv" id="contact">
   <div class="contact-inner">
    <div class="contact-text">
-  <span class="mini">خلّينا نتكلم</span>
+  <span class="mini">عندك مشروع؟</span>
   <h2>جاهز <span class="latin" dir="ltr">نبدأ؟</span></h2>
   <p>قنوات التواصل هتتضاف قبل النشر.</p>
    </div>
-   <img class="contact-mascot" src="mascot/pointing-cutout.png?v=2" alt="شخصية كانافارو بتشاور ناحيتك" width="542" height="760" loading="lazy">
+   <img class="contact-mascot" src="mascot/pointing-cutout.png?v=3" alt="شخصية كانافارو بتشاور ناحيتك" width="542" height="760" loading="lazy">
   </div>
 </section>
 

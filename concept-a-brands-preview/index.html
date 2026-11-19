@@ -155,7 +155,10 @@ html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 
 /* ===== WHO ===== */
 .who{padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
-.who-inner{max-width:760px;margin:0 auto}
+.who-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+.who-fig{margin:0;justify-self:center;width:min(100%,340px);border:2.5px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 var(--shadow);background:#0B0B1E;transition:border-color .35s,box-shadow .35s}
+.who-fig img{display:block;width:100%;height:auto}
+@media(min-width:820px){.who-inner{grid-template-columns:1.25fr 1fr;gap:56px}.who-fig{width:min(100%,420px)}}
 .who .sec-head{margin-bottom:22px}
 .who-inner .who-lead{color:var(--text);font-size:clamp(20px,3.2vw,28px);font-weight:900;line-height:1.5;margin-bottom:14px}
 .who-inner p{font-size:clamp(16px,2.2vw,18px);font-weight:600;color:var(--muted);line-height:2}
@@ -600,10 +603,13 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 
 <section class="who rv" id="who">
   <div class="who-inner">
+   <div class="who-text">
     <div class="sec-head"><h2 class="sec-title">مين إحنا <span class="latin" dir="ltr">ABOUT</span></h2></div>
     <p class="who-lead">كانافارو، فريق الميديا والويب بتاعك.</p>
     <p>بنفهم نشاطك وجمهورك وأهدافك، وبنجمع التصميم والمحتوى والتقنية عشان نبني لبراندك حضور متكامل. من الموقع والهوية للمحتوى والإعلانات، كل جزء بيكمّل التاني وبيعبّر عن نفس الشخصية.</p>
     <p>بدل ما توزّع فكرتك بين جهات مختلفة، معاك فريق واحد فاهم الصورة كاملة، وبيشتغل معاك من التخطيط للتنفيذ.</p>
+   </div>
+   <figure class="who-fig"><img src="mascot/folded-arms.jpg" alt="شخصية كانافارو واقفة بإيدين متكتفة" width="1072" height="1072" loading="lazy"></figure>
   </div>
 </section>
 

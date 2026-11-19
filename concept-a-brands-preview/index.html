@@ -154,16 +154,7 @@ html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* ===== WHO ===== */
-.who{padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
-.who-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
-.who-fig{margin:0;justify-self:center;width:min(100%,340px);border:2.5px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 var(--shadow);background:#0B0B1E;transition:border-color .35s,box-shadow .35s}
-.who-fig img{display:block;width:100%;height:auto}
-@media(min-width:820px){.who-inner{grid-template-columns:1.25fr 1fr;gap:56px}.who-fig{width:min(100%,420px)}}
-.who .sec-head{margin-bottom:22px}
-.who-inner .who-lead{color:var(--text);font-size:clamp(20px,3.2vw,28px);font-weight:900;line-height:1.5;margin-bottom:14px}
-.who-inner p{font-size:clamp(16px,2.2vw,18px);font-weight:600;color:var(--muted);line-height:2}
-.who-inner p+p{margin-top:12px}
-
+@media(min-width:820px){
 /* ===== SERVICES ===== */
 .services{padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:42px}
@@ -225,6 +216,9 @@ html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 .contact h2{font-size:clamp(44px,9vw,104px);font-weight:900;margin:22px 0 10px}
 .contact h2 .latin{text-shadow:.05em .05em 0 var(--yellow)}
 .contact p{color:var(--muted);font-weight:600;font-size:17px;margin-bottom:32px}
+.contact-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px}
+.contact-mascot{width:clamp(190px,52vw,240px);height:auto;display:block;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+@media(min-width:820px){.contact-inner{flex-direction:row;justify-content:center;gap:64px}.contact-mascot{width:300px}.contact-text{text-align:center}}
 .contact .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .btn-wa{background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:10px}
 .btn-wa:hover{background:var(--orange)}
@@ -601,18 +595,6 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
   </div>
 </section>
 
-<section class="who rv" id="who">
-  <div class="who-inner">
-   <div class="who-text">
-    <div class="sec-head"><h2 class="sec-title">مين إحنا <span class="latin" dir="ltr">ABOUT</span></h2></div>
-    <p class="who-lead">كانافارو، فريق الميديا والويب بتاعك.</p>
-    <p>بنفهم نشاطك وجمهورك وأهدافك، وبنجمع التصميم والمحتوى والتقنية عشان نبني لبراندك حضور متكامل. من الموقع والهوية للمحتوى والإعلانات، كل جزء بيكمّل التاني وبيعبّر عن نفس الشخصية.</p>
-    <p>بدل ما توزّع فكرتك بين جهات مختلفة، معاك فريق واحد فاهم الصورة كاملة، وبيشتغل معاك من التخطيط للتنفيذ.</p>
-   </div>
-   <figure class="who-fig"><img src="mascot/folded-arms-cannavaro.jpg" alt="شخصية كانافارو واقفة بإيدين متكتفة" width="1072" height="1072" loading="lazy"></figure>
-  </div>
-</section>
-
 <section class="statement rv">
   <svg class="shape star2" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FFD23F" stroke="#141414" stroke-width="2"/></svg>
   <svg class="shape ring2" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="22" stroke="#fff" stroke-width="8" opacity=".9"/></svg>
@@ -621,10 +603,14 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 </section>
 
 <section class="contact rv" id="contact">
+  <div class="contact-inner">
+   <div class="contact-text">
   <span class="mini">خلّينا نتكلم</span>
   <h2>جاهز <span class="latin" dir="ltr">نبدأ؟</span></h2>
   <p>قنوات التواصل هتتضاف قبل النشر.</p>
-  
+   </div>
+   <img class="contact-mascot" src="mascot/pointing-cutout.png" alt="شخصية كانافارو بتشاور ناحيتك" width="543" height="760" loading="lazy">
+  </div>
 </section>
 
 <section class="brands rv" id="brands">

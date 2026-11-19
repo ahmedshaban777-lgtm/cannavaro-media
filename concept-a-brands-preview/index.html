@@ -270,6 +270,25 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 .brands-row .b-mw{width:clamp(98px,20vw,210px)}
 .brands-row .b-pp{display:block;width:clamp(84px,21vw,230px);background:#14131F;border-radius:clamp(6px,1vw,12px);padding:clamp(5px,1.1vw,14px) clamp(6px,1.4vw,18px)}
 .brands-row .b-pp img{width:100%}
+
+/* illustration entrance: window, phone, camera, megaphone one after another, then calm settle */
+.illo svg .f1,.illo svg .f2,.illo svg .f3,.illo svg .f4{animation:none}
+.illo svg .keep.f3{animation:float 7.5s ease-in-out infinite}
+.illo svg .keep.f2{animation:float 6.5s ease-in-out infinite reverse}
+.en{transform-box:fill-box;transform-origin:center}
+html.js .en{opacity:0}
+.illo.on .en{animation-fill-mode:both;animation-timing-function:cubic-bezier(.2,.8,.3,1.12);animation-duration:.75s}
+.illo.on .e-win{animation-name:enWin;animation-delay:0s;animation-duration:.7s}
+.illo.on .e-phone{animation-name:enPhone;animation-delay:.6s}
+.illo.on .e-cam{animation-name:enCam;animation-delay:1.1s}
+.illo.on .e-mega{animation-name:enMega;animation-delay:1.6s}
+.illo.on .e-pen,.illo.on .e-cursor,.illo.on .e-star,.illo.on .e-star2,.illo.on .e-ring{animation-name:enPop;animation-duration:.5s}
+.illo.on .e-pen{animation-delay:2.1s}.illo.on .e-star{animation-delay:2.2s}.illo.on .e-ring{animation-delay:2.3s}.illo.on .e-star2{animation-delay:2.4s}.illo.on .e-cursor{animation-delay:2.5s}
+@keyframes enWin{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+@keyframes enPhone{from{opacity:0;transform:translateY(70px) scale(.92)}to{opacity:1;transform:none}}
+@keyframes enCam{from{opacity:0;transform:translateX(90px) rotate(6deg)}to{opacity:1;transform:none}}
+@keyframes enMega{from{opacity:0;transform:translate(40px,-40px) scale(.7)}to{opacity:1;transform:none}}
+@keyframes enPop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -307,23 +326,34 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
   <div class="illo rv">
     <svg viewBox="0 0 760 470" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مشهد يجمع تصميم المواقع والتصوير والتصميم والإعلان">
       <!-- sparkles -->
-      <g class="f3"><path d="M96 66l5 16 16 6-16 6-5 16-5-16-16-6 16-6z" fill="#FF4D00" stroke="#141414" stroke-width="2.5"/></g>
-      <g class="f2"><path d="M672 300l4 13 13 5-13 5-4 13-4-13-13-5 13-5z" fill="#FFD23F" stroke="#141414" stroke-width="2.5"/></g>
+      <g class="en e-star">
+      <g class="keep f3"><path d="M96 66l5 16 16 6-16 6-5 16-5-16-16-6 16-6z" fill="#FF4D00" stroke="#141414" stroke-width="2.5"/></g>
+      </g>
+      <g class="en e-star2">
+      <g class="keep f2"><path d="M672 300l4 13 13 5-13 5-4 13-4-13-13-5 13-5z" fill="#FFD23F" stroke="#141414" stroke-width="2.5"/></g>
+      </g>
+      <g class="en e-ring">
       <g class="f1"><circle cx="706" cy="120" r="14" fill="none" stroke="#141414" stroke-width="5"/><circle cx="706" cy="120" r="14" fill="none" stroke="#C9BCFF" stroke-width="5" stroke-dasharray="44 90"/></g>
+      </g>
       <!-- megaphone -->
-      <g class="f2" transform="rotate(-14 640 90)">
+      <g class="en e-mega">
+      <g class="keep f2" transform="rotate(-14 640 90)">
         <rect x="596" y="74" width="26" height="34" rx="8" fill="#141414"/>
         <path d="M622 66l86-26v100l-86-26z" fill="#FFB3C7" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
         <rect x="628" y="112" width="16" height="42" rx="7" fill="#FF4D00" stroke="#141414" stroke-width="4"/>
         <circle cx="708" cy="90" r="10" fill="#FFD23F" stroke="#141414" stroke-width="4"/>
       </g>
+      </g>
       <!-- pen nib -->
+      <g class="en e-pen">
       <g class="f1" transform="rotate(18 90 200)">
         <path d="M90 158l34 34-16 40-40 16-34-34 16-40z" fill="#9EE6B8" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
         <circle cx="79" cy="203" r="7" fill="#fff" stroke="#141414" stroke-width="4"/>
         <path d="M79 210v22" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
       </g>
+      </g>
       <!-- browser window -->
+      <g class="en e-win">
       <g class="f4">
         <rect x="206" y="96" width="380" height="252" rx="20" fill="#FF4D00"/>
         <rect x="196" y="84" width="380" height="252" rx="20" fill="#fff" stroke="#141414" stroke-width="4"/>
@@ -352,7 +382,9 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
         <rect x="466" y="270" width="40" height="9" rx="4.5" fill="#D8D2C8"/>
         <rect x="466" y="288" width="58" height="9" rx="4.5" fill="#E8E2D8"/>
       </g>
+      </g>
       <!-- smartphone -->
+      <g class="en e-phone">
       <g class="f1">
         <rect x="98" y="216" width="140" height="240" rx="26" fill="#141414"/>
         <rect x="110" y="228" width="116" height="216" rx="16" fill="#C9BCFF"/>
@@ -367,7 +399,9 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
         <rect x="154" y="354" width="32" height="7" rx="3.5" fill="#E8E2D8"/>
         <rect x="124" y="392" width="88" height="24" rx="12" fill="#141414"/>
       </g>
+      </g>
       <!-- camera -->
+      <g class="en e-cam">
       <g class="f2">
         <rect x="500" y="330" width="190" height="112" rx="22" fill="#141414"/>
         <rect x="490" y="318" width="190" height="112" rx="22" fill="#FFD23F" stroke="#141414" stroke-width="4"/>
@@ -378,8 +412,11 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
         <rect x="510" y="338" width="34" height="18" rx="9" fill="#FF4D00" stroke="#141414" stroke-width="3.5"/>
         <circle cx="652" cy="340" r="7" fill="#141414"/>
       </g>
+      </g>
       <!-- cursor -->
+      <g class="en e-cursor">
       <g class="f3"><path d="M330 380l46 26-19 6-10 18z" fill="#141414" stroke="#FFF6EC" stroke-width="2"/></g>
+      </g>
     </svg>
     <div class="illo-cap">موقعك، محتواك، إعلانك.. كل اللي تحتاجه في مكان واحد</div>
   </div>

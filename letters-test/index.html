@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Cannavaro letters test</title>
+<link rel="stylesheet" href="../concept-a-brands-preview/fonts/fonts.css">
+<style>
+html,body{margin:0;height:100%;background:#12111A;overflow:hidden}
+body{display:flex;align-items:center;justify-content:center;cursor:pointer}
+.stage{width:100%;overflow-x:clip;text-align:center}
+h1{margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(56px,16.5vw,215px);line-height:1;white-space:nowrap;color:#F4EEE6;text-shadow:.045em .045em 0 #FF4D00;letter-spacing:.01em}
+.l{display:inline-block;opacity:0}
+.go .l{opacity:1;animation-duration:1.5s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:both;animation-delay:calc(var(--k)*260ms)}
+.go .L{animation-name:inL}.go .R{animation-name:inR}
+@keyframes inL{from{transform:translateX(-120vw)}to{transform:none}}
+@keyframes inR{from{transform:translateX(120vw)}to{transform:none}}
+</style></head><body><div class="stage"><h1 aria-label="CANNAVARO"><span class="l L" style="--k:4" aria-hidden="true">C</span><span class="l L" style="--k:3" aria-hidden="true">A</span><span class="l L" style="--k:2" aria-hidden="true">N</span><span class="l L" style="--k:1" aria-hidden="true">N</span><span class="l L" style="--k:0" aria-hidden="true">A</span><span class="l R" style="--k:0" aria-hidden="true">V</span><span class="l R" style="--k:1" aria-hidden="true">A</span><span class="l R" style="--k:2" aria-hidden="true">R</span><span class="l R" style="--k:3" aria-hidden="true">O</span></h1></div>
+<script>const s=document.body;function go(){s.classList.remove('go');void s.offsetWidth;s.classList.add('go')}
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(go);s.addEventListener('click',go)</script></body></html>

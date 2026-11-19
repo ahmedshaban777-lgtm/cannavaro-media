@@ -688,8 +688,7 @@ const tg=document.getElementById('themeToggle');
 const setT=t=>{document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('cannavaro-theme',t)}catch(e){} const l=t==='dark'?'التبديل للوضع الفاتح':'التبديل للوضع الليلي';tg.setAttribute('aria-label',l);tg.setAttribute('title',l)};
 tg.addEventListener('click',()=>setT(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
 setT(document.documentElement.getAttribute('data-theme')||'dark');
-const nameSfx=()=>{try{const a=new Audio('audio/name-sfx.m4a');a.volume=.8;const p=a.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}};
-if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>{document.documentElement.classList.add('fonts-ready');nameSfx()})}else{document.documentElement.classList.add('fonts-ready');nameSfx()}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>document.documentElement.classList.add('fonts-ready'))}else{document.documentElement.classList.add('fonts-ready')}
 const toTop=document.getElementById('toTop');
 addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>500),{passive:true});
 toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));

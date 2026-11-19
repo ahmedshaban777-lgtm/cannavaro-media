@@ -222,25 +222,30 @@ html[data-theme="dark"] .contact{position:relative;overflow:hidden;background:
  radial-gradient(520px 340px at 82% 30%,rgba(255,77,0,.20),transparent 65%),
  radial-gradient(480px 340px at 12% 70%,rgba(201,188,255,.17),transparent 65%),
  radial-gradient(420px 300px at 50% 105%,rgba(158,230,184,.13),transparent 65%),var(--bg)}
-html[data-theme="dark"] .contact::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;border:2px dashed rgba(255,210,63,.35);top:12%;left:7%;pointer-events:none;animation:spin 40s linear infinite}
 .cdots{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.cd{position:absolute;border-radius:50%;display:block;animation:float 7s ease-in-out infinite}
-.cd.c1{width:54px;height:54px;background:var(--yellow);top:9%;right:10%;opacity:.85}
-.cd.c2{width:34px;height:34px;background:var(--pink);top:56%;left:6%;opacity:.85;animation-delay:-2s}
-.cd.c3{width:90px;height:90px;border:3px solid var(--mint);bottom:8%;right:7%;animation-delay:-4s}
-.cd.c4{width:26px;height:26px;background:var(--orange);bottom:10%;left:47%;opacity:.8;animation-delay:-1s}
-.cd.c5{width:70px;height:70px;background:var(--lav);top:7%;left:44%;opacity:.55;animation-delay:-3s}
-.cd.c6{width:18px;height:18px;background:var(--mint);top:38%;right:4%;animation-delay:-5s}
-html:not([data-theme="dark"]) .cd.c1,html:not([data-theme="dark"]) .cd.c2,html:not([data-theme="dark"]) .cd.c4,html:not([data-theme="dark"]) .cd.c5,html:not([data-theme="dark"]) .cd.c6{border:2px solid var(--ink)}
-html:not([data-theme="dark"]) .cd.c3{border-color:#3FB982}
-html[data-theme="dark"] .cd{opacity:.7}
-@media(max-width:819px){.cd.c5{top:3%;left:62%;width:46px;height:46px}.cd.c3{width:60px;height:60px;bottom:4%;right:5%}.cd.c4{left:12%;bottom:6%}.cd.c2{top:60%;left:3%}.cd.c1{top:5%;right:6%;width:40px;height:40px}}
+.cd{position:absolute;border-radius:50%;display:block;animation:float 9s ease-in-out infinite}
+.cd.c1{width:clamp(300px,46vw,600px);height:clamp(300px,46vw,600px);right:-9%;top:-26%;background:rgba(255,196,160,.55)}
+.cd.c2{width:clamp(120px,15vw,200px);height:clamp(120px,15vw,200px);left:3%;top:9%;background:rgba(158,230,184,.5);animation-delay:-3s}
+.cd.c3{width:clamp(280px,40vw,520px);height:clamp(280px,40vw,520px);left:-12%;bottom:-38%;background:rgba(201,188,255,.5);animation-delay:-5s}
+.cd.c4{width:clamp(60px,8vw,100px);height:clamp(60px,8vw,100px);left:18%;bottom:14%;border:clamp(7px,1vw,12px) solid rgba(255,210,63,.8);animation-delay:-2s}
+.cd.c5{width:clamp(22px,2.6vw,34px);height:clamp(22px,2.6vw,34px);left:36%;top:7%;background:rgba(255,179,199,.85);animation-delay:-6s}
+.cw{position:absolute;inset:0;width:100%;height:100%}
+.cw path{fill:none;stroke-linecap:round;stroke-width:2;stroke-dasharray:3 14;animation:wdrift 30s linear infinite}
+.cw1{stroke:rgba(224,168,0,.5)}.cw2{stroke:rgba(130,108,224,.45)}
+.cw2{animation-direction:reverse!important}
+html[data-theme="dark"] .cd.c1{background:rgba(255,77,0,.11)}
+html[data-theme="dark"] .cd.c2{background:rgba(158,230,184,.10)}
+html[data-theme="dark"] .cd.c3{background:rgba(201,188,255,.11)}
+html[data-theme="dark"] .cd.c4{border-color:rgba(255,210,63,.4)}
+html[data-theme="dark"] .cd.c5{background:rgba(255,179,199,.5)}
+html[data-theme="dark"] .cw1{stroke:rgba(255,210,63,.3)}
+html[data-theme="dark"] .cw2{stroke:rgba(158,230,184,.26)}
+@media(max-width:700px){.cd.c1{width:300px;height:300px;right:-24%;top:-8%}.cd.c3{width:300px;height:300px;left:-30%;bottom:-12%}.cd.c2{width:110px;height:110px;left:4%;top:3%}.cd.c4{left:auto;right:8%;bottom:10%}.cd.c5{left:auto;right:12%;top:6%}}
 .contact-inner{position:relative;z-index:1}
 html:not([data-theme="dark"]) .contact{position:relative;overflow:hidden;background:
  radial-gradient(520px 340px at 82% 30%,rgba(255,77,0,.12),transparent 65%),
  radial-gradient(480px 340px at 12% 70%,rgba(201,188,255,.34),transparent 65%),
  radial-gradient(420px 300px at 50% 105%,rgba(158,230,184,.30),transparent 65%),var(--bg)}
-html:not([data-theme="dark"]) .contact::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;border:2px dashed rgba(224,168,0,.5);top:12%;left:7%;pointer-events:none;animation:spin 40s linear infinite}
 html:not([data-theme="light"]):not([data-theme="dark"]) .contact{position:relative}
 html:not([data-theme="dark"]) .contact-mascot{filter:drop-shadow(0 10px 6px rgba(20,20,20,.42)) drop-shadow(0 26px 26px rgba(20,20,20,.30))}
 .contact .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
@@ -627,7 +632,8 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 </section>
 
 <section class="contact rv" id="contact">
-  <div class="cdots" aria-hidden="true"><i class="cd c1"></i><i class="cd c2"></i><i class="cd c3"></i><i class="cd c4"></i><i class="cd c5"></i><i class="cd c6"></i></div>
+  <div class="cdots" aria-hidden="true"><i class="cd c1"></i><i class="cd c2"></i><i class="cd c3"></i><i class="cd c4"></i><i class="cd c5"></i>
+  <svg class="cw" viewBox="0 0 1440 700" preserveAspectRatio="none"><path class="cw1" d="M-40 150 Q120 100 280 150 T600 150 T920 150 T1240 150 T1560 150"/><path class="cw2" d="M-40 560 Q120 510 280 560 T600 560 T920 560 T1240 560 T1560 560"/></svg></div>
   <div class="contact-inner">
    <div class="contact-text">
   <span class="mini">عندك مشروع؟</span>

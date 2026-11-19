@@ -223,6 +223,18 @@ html[data-theme="dark"] .contact{position:relative;overflow:hidden;background:
  radial-gradient(480px 340px at 12% 70%,rgba(201,188,255,.17),transparent 65%),
  radial-gradient(420px 300px at 50% 105%,rgba(158,230,184,.13),transparent 65%),var(--bg)}
 html[data-theme="dark"] .contact::before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;border:2px dashed rgba(255,210,63,.35);top:12%;left:7%;pointer-events:none;animation:spin 40s linear infinite}
+.cdots{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.cd{position:absolute;border-radius:50%;display:block;animation:float 7s ease-in-out infinite}
+.cd.c1{width:54px;height:54px;background:var(--yellow);top:9%;right:10%;opacity:.85}
+.cd.c2{width:34px;height:34px;background:var(--pink);top:56%;left:6%;opacity:.85;animation-delay:-2s}
+.cd.c3{width:90px;height:90px;border:3px solid var(--mint);bottom:8%;right:7%;animation-delay:-4s}
+.cd.c4{width:26px;height:26px;background:var(--orange);bottom:12%;left:34%;opacity:.8;animation-delay:-1s}
+.cd.c5{width:70px;height:70px;background:var(--lav);top:6%;left:30%;opacity:.55;animation-delay:-3s}
+.cd.c6{width:18px;height:18px;background:var(--mint);top:38%;right:4%;animation-delay:-5s}
+html:not([data-theme="dark"]) .cd.c1,html:not([data-theme="dark"]) .cd.c2,html:not([data-theme="dark"]) .cd.c4,html:not([data-theme="dark"]) .cd.c5,html:not([data-theme="dark"]) .cd.c6{border:2px solid var(--ink)}
+html:not([data-theme="dark"]) .cd.c3{border-color:#3FB982}
+html[data-theme="dark"] .cd{opacity:.7}
+@media(max-width:819px){.cd.c5{top:3%;left:62%;width:46px;height:46px}.cd.c3{width:60px;height:60px;bottom:4%;right:5%}.cd.c4{left:12%;bottom:6%}.cd.c2{top:60%;left:3%}.cd.c1{top:5%;right:6%;width:40px;height:40px}}
 .contact-inner{position:relative;z-index:1}
 html:not([data-theme="dark"]) .contact{position:relative;overflow:hidden;background:
  radial-gradient(520px 340px at 82% 30%,rgba(255,77,0,.12),transparent 65%),
@@ -615,6 +627,7 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 </section>
 
 <section class="contact rv" id="contact">
+  <div class="cdots" aria-hidden="true"><i class="cd c1"></i><i class="cd c2"></i><i class="cd c3"></i><i class="cd c4"></i><i class="cd c5"></i><i class="cd c6"></i></div>
   <div class="contact-inner">
    <div class="contact-text">
   <span class="mini">عندك مشروع؟</span>

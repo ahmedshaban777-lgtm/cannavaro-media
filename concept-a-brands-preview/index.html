@@ -297,9 +297,11 @@ html[data-theme="dark"] .brands{background:rgba(255,246,236,.035)}
 .brands-head h2{text-wrap:balance;font-size:clamp(18px,2.6vw,28px);font-weight:900;line-height:1.4}
 .brands-head h2 i{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%);padding:0 4px}
 .brands-row{display:flex;align-items:center;justify-content:center;gap:clamp(22px,4.2vw,72px);flex-wrap:wrap;margin-top:clamp(22px,3.6vh,36px);max-width:1180px;margin-inline:auto}
-.brands-row img{display:block;height:auto;object-fit:contain;filter:brightness(0);opacity:.82;transition:opacity .25s,transform .25s}
-html[data-theme="dark"] .brands-row img{filter:brightness(0) invert(1);opacity:.85}
-.brands-row img:hover{opacity:1;transform:translateY(-3px)}
+.brands-row img{display:block;height:auto;object-fit:contain;transition:transform .25s}
+html[data-theme="dark"] .brands-row .b-ald,html[data-theme="dark"] .brands-row .b-mw{filter:brightness(0) invert(1);opacity:.92}
+html[data-theme="dark"] .brands-row .b-ms{filter:brightness(1.12) saturate(1.1)}
+.b-pp-d{display:none!important}html[data-theme="dark"] .b-pp-l{display:none!important}html[data-theme="dark"] .b-pp-d{display:block!important}
+.brands-row img:hover{transform:translateY(-3px)}
 .brands-row .b-ald{width:clamp(44px,5vw,60px)}
 .brands-row .b-ms{width:clamp(150px,17vw,220px)}
 .brands-row .b-mw{width:clamp(130px,15vw,200px)}
@@ -645,7 +647,8 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
     <img class="b-ald" src="brands/aldowly.png" alt="Aldowly" loading="lazy">
     <img class="b-ms" src="brands/mirror-store-mark.png" alt="Mirror Store" loading="lazy">
     <img class="b-mw" src="brands/mirror-world.png" alt="Mirror World" loading="lazy">
-    <img class="b-pp" src="brands/performance-peak-white.png" alt="Performance Peak" loading="lazy">
+    <img class="b-pp b-pp-l" src="brands/performance-peak-dark.png" alt="Performance Peak" loading="lazy">
+    <img class="b-pp b-pp-d" src="brands/performance-peak-white.png" alt="Performance Peak" loading="lazy">
   </div>
 </section>
 

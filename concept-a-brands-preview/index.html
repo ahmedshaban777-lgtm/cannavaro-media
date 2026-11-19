@@ -45,7 +45,7 @@ html[data-theme="dark"] body::before{opacity:1}
 .hero .illo-cap{color:var(--cap)}
 .hero .kicker{color:var(--ink)}
 .hero .slogan-badge{color:var(--ink)}
-.hero-bg{display:none;position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero-bg{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 html[data-theme="dark"] .hero-bg{display:block}
 .hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
 .hero-bg .wl{fill:none;stroke-linecap:round;stroke-dasharray:3 14;animation:wdrift 26s linear infinite}
@@ -290,6 +290,20 @@ html.js .en{opacity:0}
 @keyframes enCam{from{opacity:0;transform:translateX(90px) rotate(6deg)}to{opacity:1;transform:none}}
 @keyframes enMega{from{opacity:0;transform:translate(40px,-40px) scale(.7)}to{opacity:1;transform:none}}
 @keyframes enPop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+
+/* light-theme hero life: soft curved dotted paths + translucent shapes in site colors */
+.hb-s{display:none;position:absolute;pointer-events:none;animation:float 8s ease-in-out infinite}
+html:not([data-theme="dark"]) .hb-s{display:block}
+html:not([data-theme="dark"]) .hero-bg .glow{fill:rgba(255,77,0,.12)}
+html:not([data-theme="dark"]) .hero-bg .glow2{fill:rgba(201,188,255,.38)}
+html:not([data-theme="dark"]) .hero-bg path:nth-of-type(1){stroke:rgba(224,168,0,.55)}
+html:not([data-theme="dark"]) .hero-bg path:nth-of-type(2){stroke:rgba(52,160,110,.45)}
+html:not([data-theme="dark"]) .hero-bg path:nth-of-type(3){stroke:rgba(130,108,224,.45)}
+html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,150,.42)}
+.hb1{width:clamp(54px,9vw,130px);height:clamp(54px,9vw,130px);border-radius:50%;background:rgba(158,230,184,.5);left:3%;top:8%}
+.hb2{width:clamp(40px,6vw,90px);height:clamp(40px,6vw,90px);border-radius:22%;background:rgba(201,188,255,.55);right:4%;top:40%;transform:rotate(14deg);animation-duration:10s;animation-direction:reverse}
+.hb3{width:clamp(34px,5vw,70px);height:clamp(34px,5vw,70px);border-radius:50%;border:clamp(5px,.8vw,9px) solid rgba(255,210,63,.8);left:5%;top:62%;animation-duration:9s}
+.hb4{width:clamp(18px,2.4vw,34px);height:clamp(18px,2.4vw,34px);border-radius:50%;background:rgba(255,179,199,.8);right:13%;top:10%;animation-duration:7s;animation-direction:reverse}
 </style>
 </head>
 <body>
@@ -300,7 +314,7 @@ html.js .en{opacity:0}
 </nav>
 
 <header class="hero">
-  <div class="hero-bg" aria-hidden="true">
+  <div class="hero-bg" aria-hidden="true"><span class="hb-s hb1"></span><span class="hb-s hb2"></span><span class="hb-s hb3"></span><span class="hb-s hb4"></span>
     <svg viewBox="0 0 1440 900" preserveAspectRatio="none">
       <circle class="glow" cx="1230" cy="120" r="200" fill="rgba(255,77,0,.10)"/>
       <circle class="glow glow2" cx="150" cy="640" r="230" fill="rgba(201,188,255,.08)"/>

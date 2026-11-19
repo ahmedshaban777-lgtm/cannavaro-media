@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><script>if(/[?&]m=b/.test(location.search))document.documentElement.classList.add('mB')</script>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
@@ -84,22 +84,16 @@ html.js.fonts-ready .brand{opacity:1;animation:brandShadow .7s .45s cubic-bezier
 @keyframes brandShadow{from{text-shadow:0 0 0 var(--orange)}to{text-shadow:.045em .045em 0 var(--orange)}}
 .brand-sub{font-size:clamp(12px,2.2vw,20px);letter-spacing:.55em;font-weight:800;color:var(--ink);opacity:.75;margin-bottom:26px}
 .bl{display:inline-block}
-/* A: slow accordion, letters trail in one by one then spacing closes */
-html.js.fonts-ready .bL{animation:blL .9s calc(var(--k)*170ms) cubic-bezier(.2,.7,.2,1) both}
-html.js.fonts-ready .bR{animation:blR .9s calc(var(--k)*170ms) cubic-bezier(.2,.7,.2,1) both}
-@keyframes blL{from{opacity:0;transform:translateX(-2.2em)}to{opacity:1;transform:none}}
-@keyframes blR{from{opacity:0;transform:translateX(2.2em)}to{opacity:1;transform:none}}
-html.js.fonts-ready .brand{animation:brandShadow .7s 1.6s cubic-bezier(.2,.7,.2,1) both,brandSpace .9s 1s cubic-bezier(.45,0,.2,1) both}
+/* name entrance: the liked letters-test motion (letters arrive from both edges, gaps close) */
+html.js.fonts-ready .brand{opacity:1}
+html.js.fonts-ready .bL,html.js.fonts-ready .bR{animation-duration:1.5s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:both;animation-delay:calc(var(--k)*260ms)}
+html.js.fonts-ready .bL{animation-name:blL}
+html.js.fonts-ready .bR{animation-name:blR}
+@keyframes blL{from{transform:translateX(-120vw)}to{transform:none}}
+@keyframes blR{from{transform:translateX(120vw)}to{transform:none}}
+html.js.fonts-ready .brand-sub{animation:subIn .8s 2.6s ease both}
 .brand{white-space:nowrap}
 .hero{overflow-x:clip}
-@keyframes brandSpace{from{letter-spacing:.045em}to{letter-spacing:.01em}}
-/* B: alternating zip, one letter at a time from each edge */
-html.mB.js.fonts-ready .brand{animation:brandShadow .7s 1.3s cubic-bezier(.2,.7,.2,1) both}
-html.mB.js.fonts-ready .bL{animation:blBL .8s calc(var(--r)*110ms) cubic-bezier(.17,.9,.3,1.2) both}
-html.mB.js.fonts-ready .bR{animation:blBR .8s calc(var(--r)*110ms) cubic-bezier(.17,.9,.3,1.2) both}
-@keyframes blBL{from{opacity:0;transform:translateX(-38vw) scale(.85)}to{opacity:1;transform:none}}
-@keyframes blBR{from{opacity:0;transform:translateX(38vw) scale(.85)}to{opacity:1;transform:none}}
-html.mB.js.fonts-ready .brand-sub{animation:subIn .8s 1.5s ease both}
 html.js.fonts-ready .brand-sub{animation:subIn .8s 1.9s ease both}
 @keyframes subIn{from{opacity:0;transform:translateY(8px)}to{opacity:.75;transform:none}}
 .brand-sub i{font-style:normal;color:var(--orange)}
@@ -158,6 +152,14 @@ html[data-theme="dark"] .mark.l::before{background:#5B4B9E}
 .marquee span{font-size:clamp(16px,2.6vw,24px);font-weight:800;padding:0 18px;white-space:nowrap}
 .marquee .s1{color:var(--yellow)}.marquee .s2{color:var(--mint)}.marquee .s3{color:var(--pink)}.marquee .s4{color:var(--lav)}
 @keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== WHO ===== */
+.who{padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
+.who-inner{max-width:760px;margin:0 auto}
+.who .sec-title{margin-bottom:20px}
+.who-lead{font-size:clamp(20px,3.2vw,28px);font-weight:900;line-height:1.5;margin-bottom:14px}
+.who-inner p{font-size:clamp(16px,2.2vw,18px);font-weight:600;color:var(--muted);line-height:2}
+.who-inner p+p{margin-top:12px}
 
 /* ===== SERVICES ===== */
 .services{padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
@@ -311,7 +313,7 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
 
 <nav>
   <div class="nav-brand">كانافارو<sup>®</sup></div>
-  <div class="nav-side"><button id="themeToggle" type="button" aria-label="التبديل للوضع الليلي" title="الوضع الليلي"><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 13A8 8 0 1 1 11 4a6.5 6.5 0 0 0 9 9z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button><a class="nav-svc" href="#services">الخدمات</a><a class="nav-cta" href="#contact" target="_blank" rel="noopener">تواصل معنا</a></div>
+  <div class="nav-side"><button id="themeToggle" type="button" aria-label="التبديل للوضع الليلي" title="الوضع الليلي"><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 13A8 8 0 1 1 11 4a6.5 6.5 0 0 0 9 9z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button><a class="nav-svc" href="#services">الخدمات</a><a class="nav-cta" href="#contact">تواصل معنا</a></div>
 </nav>
 
 <header class="hero">
@@ -326,7 +328,7 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
     </svg>
   </div>
   <span class="kicker">وكالة دعاية وتسويق رقمي</span>
-  <h1 class="brand latin" dir="ltr" aria-label="CANNAVARO"><span class="bl bL" style="--k:0;--r:0" aria-hidden="true">C</span><span class="bl bL" style="--k:1;--r:2" aria-hidden="true">A</span><span class="bl bL" style="--k:2;--r:4" aria-hidden="true">N</span><span class="bl bL" style="--k:3;--r:6" aria-hidden="true">N</span><span class="bl bL" style="--k:4;--r:8" aria-hidden="true">A</span><span class="bl bR" style="--k:3;--r:7" aria-hidden="true">V</span><span class="bl bR" style="--k:2;--r:5" aria-hidden="true">A</span><span class="bl bR" style="--k:1;--r:3" aria-hidden="true">R</span><span class="bl bR" style="--k:0;--r:1" aria-hidden="true">O</span></h1>
+  <h1 class="brand latin" dir="ltr" aria-label="CANNAVARO"><span class="bl bL" style="--k:4" aria-hidden="true">C</span><span class="bl bL" style="--k:3" aria-hidden="true">A</span><span class="bl bL" style="--k:2" aria-hidden="true">N</span><span class="bl bL" style="--k:1" aria-hidden="true">N</span><span class="bl bL" style="--k:0" aria-hidden="true">A</span><span class="bl bR" style="--k:0" aria-hidden="true">V</span><span class="bl bR" style="--k:1" aria-hidden="true">A</span><span class="bl bR" style="--k:2" aria-hidden="true">R</span><span class="bl bR" style="--k:3" aria-hidden="true">O</span></h1>
   <svg class="shape star-hero" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FF4D00" stroke="#141414" stroke-width="2"/></svg>
   <div class="brand-sub" dir="ltr">MEDIA <i>•</i> CONTENT <i>•</i> WEB</div>
 
@@ -593,6 +595,15 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
       <p>تسليم كامل وواضح، وشغلك جاهز يطلع للناس.</p>
     </div>
 
+  </div>
+</section>
+
+<section class="who rv" id="who">
+  <div class="who-inner">
+    <h2 class="sec-title">مين إحنا <span class="latin" dir="ltr">ABOUT</span></h2>
+    <p class="who-lead">كانافارو، فريق الميديا والويب بتاعك.</p>
+    <p>بنفهم نشاطك وجمهورك وأهدافك، وبنجمع التصميم والمحتوى والتقنية عشان نبني لبراندك حضور متكامل. من الموقع والهوية للمحتوى والإعلانات، كل جزء بيكمّل التاني وبيعبّر عن نفس الشخصية.</p>
+    <p>بدل ما توزّع فكرتك بين جهات مختلفة، معاك فريق واحد فاهم الصورة كاملة، وبيشتغل معاك من التخطيط للتنفيذ.</p>
   </div>
 </section>
 

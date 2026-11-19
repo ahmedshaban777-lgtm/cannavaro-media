@@ -258,17 +258,18 @@ html[data-theme="dark"] #themeToggle .ic-moon{display:none}
 .steps,.services,.contact,footer,.statement,.marquee,.slogan-badge{transition:background-color .35s ease,border-color .35s ease}
 .hero,.brand,.brand-sub,.def,.sec-note,.nav-brand,.nav-svc{transition:color .35s ease}
 
-.brands{background:#FFF6EC;color:#141414;padding:clamp(64px,10vh,110px) clamp(18px,4vw,56px)}
-.brands .sec-title{color:#141414}
-.brands .sec-title .latin{color:#5b564e}
-.brands .sec-note{color:#5b564e}
-/* brands strip */
-.brands-row{display:flex;align-items:center;justify-content:center;gap:clamp(10px,4.5vw,64px);flex-wrap:nowrap}
+.brands{background:#16171F;color:#F4EFE6;padding:clamp(34px,5.5vh,60px) clamp(12px,4vw,56px)}
+.brands .sec-head{margin-bottom:clamp(18px,3vh,30px)}
+.brands .sec-title{color:#F4EFE6}
+.brands .sec-title .latin{color:#B4AEC2}
+.brands .sec-note{color:#B4AEC2}
+.brands-row{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3vw,48px);flex-wrap:nowrap}
 .brands-row img{display:block;height:auto;max-width:100%;object-fit:contain}
-.brands-row .b-ald{width:clamp(34px,8.6vw,70px)}
-.brands-row .b-ms{width:clamp(84px,21vw,230px);border-radius:7%/28%}
-.brands-row .b-mw{width:clamp(98px,20vw,210px)}
-.brands-row .b-pp{display:block;width:clamp(84px,21vw,230px);background:#14131F;border-radius:clamp(6px,1vw,12px);padding:clamp(5px,1.1vw,14px) clamp(6px,1.4vw,18px)}
+.brands-row .plate{display:block;background:#FFF6EC;border-radius:clamp(6px,1vw,12px);padding:clamp(4px,1vw,12px) clamp(5px,1.2vw,16px)}
+.brands-row .b-ald{width:clamp(26px,6.4vw,56px)}
+.brands-row .b-ms{width:clamp(78px,20vw,220px);border-radius:7%/28%}
+.brands-row .b-mw{width:clamp(80px,18vw,190px)}
+.brands-row .b-pp{display:block;width:clamp(78px,20vw,220px);background:#14131F;border:1px solid rgba(244,239,230,.18);border-radius:clamp(6px,1vw,12px);padding:clamp(4px,1vw,12px) clamp(5px,1.2vw,16px)}
 .brands-row .b-pp img{width:100%}
 
 /* illustration entrance: window, phone, camera, megaphone one after another, then calm settle */
@@ -544,12 +545,12 @@ html.js .en{opacity:0}
 <section class="brands rv" id="brands">
   <div class="sec-head">
     <h2 class="sec-title">براندات <span class="latin" dir="ltr">BRANDS</span></h2>
-    <p class="sec-note">اشتغلنا معاهم بشكل حقيقي، من خبرات فريقنا السابقة قبل تأسيس كانافارو.</p>
+    <p class="sec-note">من شغل فريقنا</p>
   </div>
   <div class="brands-row">
-    <img class="b-ald" src="brands/aldowly.png" alt="Aldowly" loading="lazy">
+    <span class="plate"><img class="b-ald" src="brands/aldowly.png" alt="Aldowly" loading="lazy"></span>
     <img class="b-ms" src="brands/mirror-store.jpg" alt="Mirror Store" loading="lazy">
-    <img class="b-mw" src="brands/mirror-world.png" alt="Mirror World" loading="lazy">
+    <span class="plate"><img class="b-mw" src="brands/mirror-world.png" alt="Mirror World" loading="lazy"></span>
     <span class="b-pp"><img src="brands/performance-peak-white.png" alt="Performance Peak" loading="lazy"></span>
   </div>
 </section>

@@ -101,7 +101,7 @@ html.js.fonts-ready .brand-sub{animation:subIn .8s 1.9s ease both}
 .slogan-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.25}}
 .slogan-line{margin:-14px 0 10px;display:inline-block;position:relative;font-size:clamp(16px,2.6vw,24px);font-weight:800;line-height:1.6;color:var(--ink)}
-html[data-theme="dark"] .slogan-line{color:var(--text)}
+html[data-theme="dark"] .slogan-line{color:var(--text);text-shadow:0 1px 3px rgba(0,0,0,.55)}
 .slogan-line .grad{color:inherit}
 .slogan-line .grad .o{color:var(--orange)}
 .slogan-line .grad,.slogan-line .em{display:inline-block;white-space:nowrap}
@@ -115,7 +115,7 @@ html[data-theme="dark"] .slogan-line .brushD{display:block}
 @keyframes textSweep{from{clip-path:inset(-4px -4px -4px 100%)}to{clip-path:inset(-4px -4px -4px 0)}}
 .slogan-line .sweep{display:inline-block}
 .slogan-line .em .o2{color:var(--orange)}
-html[data-theme="dark"] .slogan-line .grad .o,html[data-theme="dark"] .slogan-line .em .o2{color:#FFB38A}
+html[data-theme="dark"] .slogan-line .grad .o,html[data-theme="dark"] .slogan-line .em .o2{color:var(--orange)}
 html.js.fonts-ready .slogan-line .brush{animation:brushDrawL2R .9s 2.6s cubic-bezier(.3,.7,.25,1) both}
 html.js.fonts-ready .slogan-line .sweep{animation:textSweep .9s 2.6s cubic-bezier(.3,.7,.25,1) both}
 .slogan-line .en{font-family:'Anton';letter-spacing:.03em;font-weight:400}

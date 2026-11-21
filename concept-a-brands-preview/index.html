@@ -110,6 +110,8 @@ html[data-theme="dark"] .slogan-line{color:var(--text)}
 .slogan-line .brushD{display:none}
 html[data-theme="dark"] .slogan-line .brushL{display:none}
 html[data-theme="dark"] .slogan-line .brushD{display:block}
+@keyframes brushDraw{from{clip-path:inset(-6px -6px -6px 100%)}to{clip-path:inset(-6px -6px -6px 0)}}
+html.js.fonts-ready .slogan-line .brush{animation:brushDraw .9s 2.6s cubic-bezier(.3,.7,.25,1) both}
 .slogan-line .en{font-family:'Anton';letter-spacing:.03em;font-weight:400}
 .def{max-width:600px;margin:16px auto 0;font-size:clamp(14.5px,2vw,17px);line-height:1.9;color:#3d3a35;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.15)}
 .def b{color:var(--ink)}
@@ -389,7 +391,7 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
   <h1 class="brand latin" dir="ltr" aria-label="CANNAVARO"><span class="bl bL" style="--k:4" aria-hidden="true">C</span><span class="bl bL" style="--k:3" aria-hidden="true">A</span><span class="bl bL" style="--k:2" aria-hidden="true">N</span><span class="bl bL" style="--k:1" aria-hidden="true">N</span><span class="bl bL" style="--k:0" aria-hidden="true">A</span><span class="bl bR" style="--k:0" aria-hidden="true">V</span><span class="bl bR" style="--k:1" aria-hidden="true">A</span><span class="bl bR" style="--k:2" aria-hidden="true">R</span><span class="bl bR" style="--k:3" aria-hidden="true">O</span></h1>
   <svg class="shape star-hero" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FF4D00" stroke="#141414" stroke-width="2"/></svg>
   <div class="brand-sub" dir="ltr">MEDIA <i>•</i> CONTENT <i>•</i> WEB</div>
-  <div class="slogan-line"><svg class="brush brushL" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#FFB3C7"/></svg><svg class="brush brushD" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#8E3A54"/></svg><span class="grad">ركز في <span class="o">شغلك</span>.. </span><span class="em">وإحنا في ضهرك</span></div>
+  <div class="slogan-line"><svg class="brush brushL" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#FFD23F"/></svg><svg class="brush brushD" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#8A6800"/></svg><span class="grad">ركز في <span class="o">شغلك</span>.. </span><span class="em">وإحنا في ضهرك</span></div>
 
   <div class="hero-grid">
   <div class="hero-text">

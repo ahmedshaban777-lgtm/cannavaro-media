@@ -100,17 +100,16 @@ html.js.fonts-ready .brand-sub{animation:subIn .8s 1.9s ease both}
 .slogan-badge{display:inline-flex;align-items:center;gap:10px;border:2px dashed var(--ink);border-radius:99px;padding:7px 18px;font-size:13.5px;font-weight:700;background:#fff;transform:rotate(-1.2deg)}
 .slogan-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.25}}
-.slogan-line{margin-top:-6px;display:inline-block;font-size:clamp(14.5px,2.2vw,20px);font-weight:900;line-height:1.6;border:2px dashed var(--ink);border-radius:99px;padding:5px 16px;background:var(--bg2);transform:rotate(-1.2deg)}
-html[data-theme="dark"] .slogan-line{border-color:var(--line);background:var(--surface)}
-.slogan-line .grad{color:var(--ink)}
-.slogan-line .grad .o{color:var(--orange)}
-html[data-theme="dark"] .slogan-line .grad{background-image:linear-gradient(90deg,var(--orange) 0%,var(--yellow) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
-html[data-theme="dark"] .slogan-line .grad .o{color:transparent;-webkit-text-fill-color:transparent}
+.slogan-line{margin:-14px 0 10px;display:inline-block;position:relative;font-size:clamp(16px,2.6vw,24px);font-weight:800;line-height:1.6;color:var(--ink)}
+html[data-theme="dark"] .slogan-line{color:var(--text)}
+.slogan-line .grad{color:inherit}
+.slogan-line .grad .o{color:inherit}
 .slogan-line .grad,.slogan-line .em{display:inline-block;white-space:nowrap}
-.slogan-line .em{position:relative;color:var(--ink)}
-html[data-theme="dark"] .slogan-line .em{color:var(--text)}
-.slogan-line .em::before{content:"";position:absolute;inset:auto -3px 2px -3px;height:.42em;z-index:-1;border-radius:3px;transform:skew(-8deg);background:var(--lav)}
-html[data-theme="dark"] .slogan-line .em::before{inset:auto -3px .08em -3px;height:.86em;transform:skew(-8deg) rotate(-.8deg);background:#5B4B9E}
+.slogan-line .em{color:inherit}
+.slogan-line .brush{position:absolute;left:-14px;bottom:-2px;height:.8em;width:calc(100% + 28px);z-index:-1;transform:rotate(-.6deg);pointer-events:none}
+.slogan-line .brushD{display:none}
+html[data-theme="dark"] .slogan-line .brushL{display:none}
+html[data-theme="dark"] .slogan-line .brushD{display:block}
 .slogan-line .en{font-family:'Anton';letter-spacing:.03em;font-weight:400}
 .def{max-width:600px;margin:16px auto 0;font-size:clamp(14.5px,2vw,17px);line-height:1.9;color:#3d3a35;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.15)}
 .def b{color:var(--ink)}
@@ -390,11 +389,10 @@ html:not([data-theme="dark"]) .hero-bg path:nth-of-type(4){stroke:rgba(255,110,1
   <h1 class="brand latin" dir="ltr" aria-label="CANNAVARO"><span class="bl bL" style="--k:4" aria-hidden="true">C</span><span class="bl bL" style="--k:3" aria-hidden="true">A</span><span class="bl bL" style="--k:2" aria-hidden="true">N</span><span class="bl bL" style="--k:1" aria-hidden="true">N</span><span class="bl bL" style="--k:0" aria-hidden="true">A</span><span class="bl bR" style="--k:0" aria-hidden="true">V</span><span class="bl bR" style="--k:1" aria-hidden="true">A</span><span class="bl bR" style="--k:2" aria-hidden="true">R</span><span class="bl bR" style="--k:3" aria-hidden="true">O</span></h1>
   <svg class="shape star-hero" viewBox="0 0 60 60" fill="none"><path d="M30 0l6 22 22 8-22 8-6 22-6-22-22-8 22-8z" fill="#FF4D00" stroke="#141414" stroke-width="2"/></svg>
   <div class="brand-sub" dir="ltr">MEDIA <i>•</i> CONTENT <i>•</i> WEB</div>
+  <div class="slogan-line"><svg class="brush brushL" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#FFB3C7"/></svg><svg class="brush brushD" viewBox="0 0 300 36" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 6 60 16 95 10 S160 5 195 11 S250 16 275 9 S296 12 298 14 L296 29 C268 34 230 27 192 32 S110 35 70 30 S20 31 3 25 Z" fill="#8E3A54"/></svg><span class="grad">ركز في <span class="o">شغلك</span>.. </span><span class="em">وإحنا في ضهرك</span></div>
 
   <div class="hero-grid">
   <div class="hero-text">
-  <div class="slogan-line"><span class="grad">ركز في <span class="o">شغلك</span>.. </span><span class="em">وإحنا في ضهرك</span></div>
-
   <p class="def">وكالة متكاملة تبني <b>حضورك الرقمي</b> من الفكرة للشاشة: <span class="mark m">مواقع ومتاجر</span>، <span class="mark y">محتوى وهوية</span>، حملات ممولة، و<span class="mark l">تعليق صوتي</span> — كلها تحت سقف واحد.</p>
   </div>
 
